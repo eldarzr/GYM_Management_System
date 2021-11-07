@@ -84,7 +84,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/main.cpp">
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/include/Workout.h">
+			<Option target="SPL_HW1"/>
+		</Unit>
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/Workout.cpp">
+			<Option target="SPL_HW1"/>
+		</Unit>
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/main.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
 		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/CMakeLists.txt">

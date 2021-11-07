@@ -129,29 +129,53 @@ SPL_HW1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/build
 .PHONY : SPL_HW1/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/Workout.o: src/Workout.cpp.o
+.PHONY : src/Workout.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/Workout.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Workout.cpp.o
+.PHONY : src/Workout.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/Workout.i: src/Workout.cpp.i
+.PHONY : src/Workout.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/Workout.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Workout.cpp.i
+.PHONY : src/Workout.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/Workout.s: src/Workout.cpp.s
+.PHONY : src/Workout.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/Workout.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Workout.cpp.s
+.PHONY : src/Workout.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -162,9 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SPL_HW1"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/Workout.o"
+	@echo "... src/Workout.i"
+	@echo "... src/Workout.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

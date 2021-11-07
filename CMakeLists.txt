@@ -3,4 +3,4 @@ project(SPL_HW1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(SPL_HW1 main.cpp)
+add_executable(SPL_HW1 src/main.cpp include/Workout.h src/Workout.cpp)
