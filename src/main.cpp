@@ -9,6 +9,7 @@ using namespace std;
 Workout* w;
 int main(int argc, char** argv){
 
+    Workout w(3,"a",3,WorkoutType(0));
 /*    if(argc!=2){
         std::cout << "usage: studio <config_path>" << std::endl;
         return 0;
