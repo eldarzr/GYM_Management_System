@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/spl211/CLionProjects/SPL_HW1/include/Workout.h
+C:/SPL/SPL_HW1/include/Workout.h
 string
 -
 
-/home/spl211/CLionProjects/SPL_HW1/src/main.cpp
+C:/SPL/SPL_HW1/src/main.cpp
 ../include/Workout.h
-/home/spl211/CLionProjects/SPL_HW1/include/Workout.h
+C:/SPL/SPL_HW1/include/Workout.h
 iostream
 -
 
