@@ -129,6 +129,30 @@ SPL_HW1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/build
 .PHONY : SPL_HW1/fast
 
+src/Customer.o: src/Customer.cpp.o
+.PHONY : src/Customer.o
+
+# target to build an object file
+src/Customer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Customer.cpp.o
+.PHONY : src/Customer.cpp.o
+
+src/Customer.i: src/Customer.cpp.i
+.PHONY : src/Customer.i
+
+# target to preprocess a source file
+src/Customer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Customer.cpp.i
+.PHONY : src/Customer.cpp.i
+
+src/Customer.s: src/Customer.cpp.s
+.PHONY : src/Customer.s
+
+# target to generate assembly for a file
+src/Customer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Customer.cpp.s
+.PHONY : src/Customer.cpp.s
+
 src/Workout.o: src/Workout.cpp.o
 .PHONY : src/Workout.o
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SPL_HW1"
+	@echo "... src/Customer.o"
+	@echo "... src/Customer.i"
+	@echo "... src/Customer.s"
 	@echo "... src/Workout.o"
 	@echo "... src/Workout.i"
 	@echo "... src/Workout.s"

@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/SPL_HW1.dir/src/main.cpp.o CMakeFiles/SPL_HW1.dir/src/Workout.cpp.o -o SPL_HW1 
+/usr/bin/c++ -g CMakeFiles/SPL_HW1.dir/src/main.cpp.o CMakeFiles/SPL_HW1.dir/src/Workout.cpp.o CMakeFiles/SPL_HW1.dir/src/Customer.cpp.o -o SPL_HW1 

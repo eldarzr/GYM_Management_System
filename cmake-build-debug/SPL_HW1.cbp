@@ -99,6 +99,9 @@
 		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/include/Workout.h">
 			<Option target="SPL_HW1"/>
 		</Unit>
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/Customer.cpp">
+			<Option target="SPL_HW1"/>
+		</Unit>
 		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/Workout.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
