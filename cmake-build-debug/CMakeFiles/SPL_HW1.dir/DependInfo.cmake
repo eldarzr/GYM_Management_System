@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/SPL/SPL_HW1/src/Workout.cpp" "C:/SPL/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/Workout.cpp.obj"
-  "C:/SPL/SPL_HW1/src/main.cpp" "C:/SPL/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/main.cpp.obj"
+  "/home/spl211/CLionProjects/SPL_HW1/src/Workout.cpp" "/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/Workout.cpp.o"
+  "/home/spl211/CLionProjects/SPL_HW1/src/main.cpp" "/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
