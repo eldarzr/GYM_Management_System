@@ -7,6 +7,7 @@
 CheapCustomer::CheapCustomer(std::string name, int id): Customer(name,id){}
 CheapCustomer::CheapCustomer(const CheapCustomer& other): Customer(other.getName(), other.getId()){}
 CheapCustomer::~CheapCustomer(){}
+Customer* CheapCustomer::clone() {return new CheapCustomer(*this);}
 
 std::vector<int> CheapCustomer::order(const std::vector<Workout> &workout_options){
     std::vector<int>plan;

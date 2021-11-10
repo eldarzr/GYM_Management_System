@@ -14,31 +14,25 @@ string
 Workout.h
 /home/spl211/CLionProjects/SPL_HW1/include/Workout.h
 
+/home/spl211/CLionProjects/SPL_HW1/include/Trainer.h
+vector
+-
+Customer.h
+/home/spl211/CLionProjects/SPL_HW1/include/Customer.h
+Workout.h
+/home/spl211/CLionProjects/SPL_HW1/include/Workout.h
+
 /home/spl211/CLionProjects/SPL_HW1/include/Workout.h
 string
 -
-
-/home/spl211/CLionProjects/SPL_HW1/src/CheapCustomer.cpp
-../include/Customer.h
-/home/spl211/CLionProjects/SPL_HW1/include/Customer.h
-
-/home/spl211/CLionProjects/SPL_HW1/src/Customer.cpp
-../include/Customer.h
-/home/spl211/CLionProjects/SPL_HW1/include/Customer.h
-
-/home/spl211/CLionProjects/SPL_HW1/src/SweatyCustomer.cpp
-../include/Customer.h
-/home/spl211/CLionProjects/SPL_HW1/include/Customer.h
-
-/home/spl211/CLionProjects/SPL_HW1/src/Workout.cpp
-../include/Workout.h
-/home/spl211/CLionProjects/SPL_HW1/include/Workout.h
 
 /home/spl211/CLionProjects/SPL_HW1/src/main.cpp
 ../include/Workout.h
 /home/spl211/CLionProjects/SPL_HW1/include/Workout.h
 ../include/Customer.h
 /home/spl211/CLionProjects/SPL_HW1/include/Customer.h
+../include/Trainer.h
+/home/spl211/CLionProjects/SPL_HW1/include/Trainer.h
 iostream
 -
 

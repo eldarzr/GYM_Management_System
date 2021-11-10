@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/spl211/CLionProjects/SPL_HW1/src/CheapCustomer.cpp" "/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/CheapCustomer.cpp.o"
   "/home/spl211/CLionProjects/SPL_HW1/src/Customer.cpp" "/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/Customer.cpp.o"
   "/home/spl211/CLionProjects/SPL_HW1/src/SweatyCustomer.cpp" "/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/SweatyCustomer.cpp.o"
+  "/home/spl211/CLionProjects/SPL_HW1/src/Trainer.cpp" "/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/Trainer.cpp.o"
   "/home/spl211/CLionProjects/SPL_HW1/src/Workout.cpp" "/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/Workout.cpp.o"
   "/home/spl211/CLionProjects/SPL_HW1/src/main.cpp" "/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/main.cpp.o"
   )

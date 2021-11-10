@@ -201,6 +201,30 @@ src/SweatyCustomer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/SweatyCustomer.cpp.s
 .PHONY : src/SweatyCustomer.cpp.s
 
+src/Trainer.o: src/Trainer.cpp.o
+.PHONY : src/Trainer.o
+
+# target to build an object file
+src/Trainer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Trainer.cpp.o
+.PHONY : src/Trainer.cpp.o
+
+src/Trainer.i: src/Trainer.cpp.i
+.PHONY : src/Trainer.i
+
+# target to preprocess a source file
+src/Trainer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Trainer.cpp.i
+.PHONY : src/Trainer.cpp.i
+
+src/Trainer.s: src/Trainer.cpp.s
+.PHONY : src/Trainer.s
+
+# target to generate assembly for a file
+src/Trainer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Trainer.cpp.s
+.PHONY : src/Trainer.cpp.s
+
 src/Workout.o: src/Workout.cpp.o
 .PHONY : src/Workout.o
 
@@ -267,6 +291,9 @@ help:
 	@echo "... src/SweatyCustomer.o"
 	@echo "... src/SweatyCustomer.i"
 	@echo "... src/SweatyCustomer.s"
+	@echo "... src/Trainer.o"
+	@echo "... src/Trainer.i"
+	@echo "... src/Trainer.s"
 	@echo "... src/Workout.o"
 	@echo "... src/Workout.i"
 	@echo "... src/Workout.s"

@@ -8,6 +8,9 @@ SweatyCustomer::SweatyCustomer(std::string name, int id): Customer(name,id){}
 SweatyCustomer::SweatyCustomer(const SweatyCustomer& other): Customer(other.getName(), other.getId()){}
 SweatyCustomer::~SweatyCustomer(){}
 
+Customer* SweatyCustomer::clone() {return new SweatyCustomer(*this);}
+
+
 std::vector<int> SweatyCustomer::order(const std::vector<Workout> &workout_options){
     std::vector<int>plan;
     for(int i=0; i<workout_options.size(); i++) {

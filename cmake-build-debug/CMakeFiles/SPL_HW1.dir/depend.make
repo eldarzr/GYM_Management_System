@@ -13,10 +13,16 @@ CMakeFiles/SPL_HW1.dir/src/SweatyCustomer.cpp.o: \
  ../include/Customer.h \
  ../include/Workout.h \
  ../src/SweatyCustomer.cpp
+CMakeFiles/SPL_HW1.dir/src/Trainer.cpp.o: \
+ ../include/Customer.h \
+ ../include/Trainer.h \
+ ../include/Workout.h \
+ ../src/Trainer.cpp
 CMakeFiles/SPL_HW1.dir/src/Workout.cpp.o: \
  ../include/Workout.h \
  ../src/Workout.cpp
 CMakeFiles/SPL_HW1.dir/src/main.cpp.o: \
  ../include/Customer.h \
+ ../include/Trainer.h \
  ../include/Workout.h \
  ../src/main.cpp

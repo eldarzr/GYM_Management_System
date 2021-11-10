@@ -108,6 +108,9 @@
 		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/SweatyCustomer.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/Trainer.cpp">
+			<Option target="SPL_HW1"/>
+		</Unit>
 		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/Workout.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
