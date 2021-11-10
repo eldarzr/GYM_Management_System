@@ -8,6 +8,8 @@
 class Customer{
 public:
     Customer(std::string c_name, int c_id);
+    Customer(const Customer& other);
+    virtual ~Customer();
     virtual std::vector<int> order(const std::vector<Workout> &workout_options)=0;
     virtual std::string toString() const = 0;
     std::string getName() const;
@@ -23,6 +25,7 @@ public:
     SweatyCustomer(std::string name, int id);
     std::vector<int> order(const std::vector<Workout> &workout_options);
     std::string toString() const;
+    virtual ~SweatyCustomer();
 private:
 };
 
