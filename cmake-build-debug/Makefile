@@ -57,10 +57,10 @@ RM = /home/spl211/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/spl211/SPL_HW1
+CMAKE_SOURCE_DIR = /home/spl211/CLionProjects/SPL_HW1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/spl211/SPL_HW1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/spl211/CLionProjects/SPL_HW1/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/SPL_HW1/cmake-build-debug/CMakeFiles /home/spl211/SPL_HW1/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles /home/spl211/CLionProjects/SPL_HW1/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/SPL_HW1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,6 +129,30 @@ SPL_HW1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/build
 .PHONY : SPL_HW1/fast
 
+src/CheapCustomer.o: src/CheapCustomer.cpp.o
+.PHONY : src/CheapCustomer.o
+
+# target to build an object file
+src/CheapCustomer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/CheapCustomer.cpp.o
+.PHONY : src/CheapCustomer.cpp.o
+
+src/CheapCustomer.i: src/CheapCustomer.cpp.i
+.PHONY : src/CheapCustomer.i
+
+# target to preprocess a source file
+src/CheapCustomer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/CheapCustomer.cpp.i
+.PHONY : src/CheapCustomer.cpp.i
+
+src/CheapCustomer.s: src/CheapCustomer.cpp.s
+.PHONY : src/CheapCustomer.s
+
+# target to generate assembly for a file
+src/CheapCustomer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/CheapCustomer.cpp.s
+.PHONY : src/CheapCustomer.cpp.s
+
 src/Customer.o: src/Customer.cpp.o
 .PHONY : src/Customer.o
 
@@ -152,6 +176,30 @@ src/Customer.s: src/Customer.cpp.s
 src/Customer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Customer.cpp.s
 .PHONY : src/Customer.cpp.s
+
+src/SweatyCustomer.o: src/SweatyCustomer.cpp.o
+.PHONY : src/SweatyCustomer.o
+
+# target to build an object file
+src/SweatyCustomer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/SweatyCustomer.cpp.o
+.PHONY : src/SweatyCustomer.cpp.o
+
+src/SweatyCustomer.i: src/SweatyCustomer.cpp.i
+.PHONY : src/SweatyCustomer.i
+
+# target to preprocess a source file
+src/SweatyCustomer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/SweatyCustomer.cpp.i
+.PHONY : src/SweatyCustomer.cpp.i
+
+src/SweatyCustomer.s: src/SweatyCustomer.cpp.s
+.PHONY : src/SweatyCustomer.s
+
+# target to generate assembly for a file
+src/SweatyCustomer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/SweatyCustomer.cpp.s
+.PHONY : src/SweatyCustomer.cpp.s
 
 src/Workout.o: src/Workout.cpp.o
 .PHONY : src/Workout.o
@@ -210,9 +258,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SPL_HW1"
+	@echo "... src/CheapCustomer.o"
+	@echo "... src/CheapCustomer.i"
+	@echo "... src/CheapCustomer.s"
 	@echo "... src/Customer.o"
 	@echo "... src/Customer.i"
 	@echo "... src/Customer.s"
+	@echo "... src/SweatyCustomer.o"
+	@echo "... src/SweatyCustomer.i"
+	@echo "... src/SweatyCustomer.s"
 	@echo "... src/Workout.o"
 	@echo "... src/Workout.i"
 	@echo "... src/Workout.s"

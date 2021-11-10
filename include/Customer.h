@@ -23,9 +23,10 @@ private:
 class SweatyCustomer : public Customer {
 public:
     SweatyCustomer(std::string name, int id);
+    SweatyCustomer(const SweatyCustomer& other);
+    virtual ~SweatyCustomer();
     std::vector<int> order(const std::vector<Workout> &workout_options);
     std::string toString() const;
-    virtual ~SweatyCustomer();
 private:
 };
 
@@ -33,6 +34,8 @@ private:
 class CheapCustomer : public Customer {
 public:
     CheapCustomer(std::string name, int id);
+    CheapCustomer(const CheapCustomer& other);
+    virtual ~CheapCustomer();
     std::vector<int> order(const std::vector<Workout> &workout_options);
     std::string toString() const;
 private:
