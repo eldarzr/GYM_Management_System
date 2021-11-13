@@ -57,10 +57,6 @@ std::vector<Customer*>& Trainer::getCustomers() {
 }
 
 void Trainer::order(const int customer_id, const std::vector<int> workout_ids, const std::vector<Workout>& workout_options){
-    if(open)
-        throw new std::exception();
-    if(!isCustomerExist(customer_id))
-        throw new std::exception();
     for(int i=0; i<workout_ids.size(); i++)
         orderList.push_back(OrderPair(customer_id, workout_options[workout_ids[i]]));
 }
@@ -74,4 +70,4 @@ bool Trainer::isCustomerExist(int id){
 }
 
 bool Trainer::isOpen(){return open;}
-
+void Trainer::openTrainer() {open = true;}

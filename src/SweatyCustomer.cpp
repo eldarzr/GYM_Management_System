@@ -3,7 +3,6 @@
 //
 
 #include "../include/Customer.h"
-
 SweatyCustomer::SweatyCustomer(std::string name, int id): Customer(name,id){}
 SweatyCustomer::SweatyCustomer(const SweatyCustomer& other): Customer(other.getName(), other.getId()){}
 SweatyCustomer::~SweatyCustomer(){}

@@ -129,6 +129,30 @@ SPL_HW1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/build
 .PHONY : SPL_HW1/fast
 
+src/BaseAction.o: src/BaseAction.cpp.o
+.PHONY : src/BaseAction.o
+
+# target to build an object file
+src/BaseAction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/BaseAction.cpp.o
+.PHONY : src/BaseAction.cpp.o
+
+src/BaseAction.i: src/BaseAction.cpp.i
+.PHONY : src/BaseAction.i
+
+# target to preprocess a source file
+src/BaseAction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/BaseAction.cpp.i
+.PHONY : src/BaseAction.cpp.i
+
+src/BaseAction.s: src/BaseAction.cpp.s
+.PHONY : src/BaseAction.s
+
+# target to generate assembly for a file
+src/BaseAction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/BaseAction.cpp.s
+.PHONY : src/BaseAction.cpp.s
+
 src/CheapCustomer.o: src/CheapCustomer.cpp.o
 .PHONY : src/CheapCustomer.o
 
@@ -176,6 +200,54 @@ src/Customer.s: src/Customer.cpp.s
 src/Customer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Customer.cpp.s
 .PHONY : src/Customer.cpp.s
+
+src/OpenTrainer.o: src/OpenTrainer.cpp.o
+.PHONY : src/OpenTrainer.o
+
+# target to build an object file
+src/OpenTrainer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.o
+.PHONY : src/OpenTrainer.cpp.o
+
+src/OpenTrainer.i: src/OpenTrainer.cpp.i
+.PHONY : src/OpenTrainer.i
+
+# target to preprocess a source file
+src/OpenTrainer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.i
+.PHONY : src/OpenTrainer.cpp.i
+
+src/OpenTrainer.s: src/OpenTrainer.cpp.s
+.PHONY : src/OpenTrainer.s
+
+# target to generate assembly for a file
+src/OpenTrainer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.s
+.PHONY : src/OpenTrainer.cpp.s
+
+src/Studio.o: src/Studio.cpp.o
+.PHONY : src/Studio.o
+
+# target to build an object file
+src/Studio.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Studio.cpp.o
+.PHONY : src/Studio.cpp.o
+
+src/Studio.i: src/Studio.cpp.i
+.PHONY : src/Studio.i
+
+# target to preprocess a source file
+src/Studio.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Studio.cpp.i
+.PHONY : src/Studio.cpp.i
+
+src/Studio.s: src/Studio.cpp.s
+.PHONY : src/Studio.s
+
+# target to generate assembly for a file
+src/Studio.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Studio.cpp.s
+.PHONY : src/Studio.cpp.s
 
 src/SweatyCustomer.o: src/SweatyCustomer.cpp.o
 .PHONY : src/SweatyCustomer.o
@@ -282,12 +354,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SPL_HW1"
+	@echo "... src/BaseAction.o"
+	@echo "... src/BaseAction.i"
+	@echo "... src/BaseAction.s"
 	@echo "... src/CheapCustomer.o"
 	@echo "... src/CheapCustomer.i"
 	@echo "... src/CheapCustomer.s"
 	@echo "... src/Customer.o"
 	@echo "... src/Customer.i"
 	@echo "... src/Customer.s"
+	@echo "... src/OpenTrainer.o"
+	@echo "... src/OpenTrainer.i"
+	@echo "... src/OpenTrainer.s"
+	@echo "... src/Studio.o"
+	@echo "... src/Studio.i"
+	@echo "... src/Studio.s"
 	@echo "... src/SweatyCustomer.o"
 	@echo "... src/SweatyCustomer.i"
 	@echo "... src/SweatyCustomer.s"

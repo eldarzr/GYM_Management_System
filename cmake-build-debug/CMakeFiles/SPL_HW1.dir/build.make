@@ -144,6 +144,45 @@ CMakeFiles/SPL_HW1.dir/src/Trainer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SPL_HW1.dir/src/Trainer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/CLionProjects/SPL_HW1/src/Trainer.cpp -o CMakeFiles/SPL_HW1.dir/src/Trainer.cpp.s
 
+CMakeFiles/SPL_HW1.dir/src/BaseAction.cpp.o: CMakeFiles/SPL_HW1.dir/flags.make
+CMakeFiles/SPL_HW1.dir/src/BaseAction.cpp.o: ../src/BaseAction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SPL_HW1.dir/src/BaseAction.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SPL_HW1.dir/src/BaseAction.cpp.o -c /home/spl211/CLionProjects/SPL_HW1/src/BaseAction.cpp
+
+CMakeFiles/SPL_HW1.dir/src/BaseAction.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SPL_HW1.dir/src/BaseAction.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/CLionProjects/SPL_HW1/src/BaseAction.cpp > CMakeFiles/SPL_HW1.dir/src/BaseAction.cpp.i
+
+CMakeFiles/SPL_HW1.dir/src/BaseAction.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SPL_HW1.dir/src/BaseAction.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/CLionProjects/SPL_HW1/src/BaseAction.cpp -o CMakeFiles/SPL_HW1.dir/src/BaseAction.cpp.s
+
+CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.o: CMakeFiles/SPL_HW1.dir/flags.make
+CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.o: ../src/OpenTrainer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.o -c /home/spl211/CLionProjects/SPL_HW1/src/OpenTrainer.cpp
+
+CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/CLionProjects/SPL_HW1/src/OpenTrainer.cpp > CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.i
+
+CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/CLionProjects/SPL_HW1/src/OpenTrainer.cpp -o CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.s
+
+CMakeFiles/SPL_HW1.dir/src/Studio.cpp.o: CMakeFiles/SPL_HW1.dir/flags.make
+CMakeFiles/SPL_HW1.dir/src/Studio.cpp.o: ../src/Studio.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SPL_HW1.dir/src/Studio.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SPL_HW1.dir/src/Studio.cpp.o -c /home/spl211/CLionProjects/SPL_HW1/src/Studio.cpp
+
+CMakeFiles/SPL_HW1.dir/src/Studio.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SPL_HW1.dir/src/Studio.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/CLionProjects/SPL_HW1/src/Studio.cpp > CMakeFiles/SPL_HW1.dir/src/Studio.cpp.i
+
+CMakeFiles/SPL_HW1.dir/src/Studio.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SPL_HW1.dir/src/Studio.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/CLionProjects/SPL_HW1/src/Studio.cpp -o CMakeFiles/SPL_HW1.dir/src/Studio.cpp.s
+
 # Object files for target SPL_HW1
 SPL_HW1_OBJECTS = \
 "CMakeFiles/SPL_HW1.dir/src/main.cpp.o" \
@@ -151,7 +190,10 @@ SPL_HW1_OBJECTS = \
 "CMakeFiles/SPL_HW1.dir/src/Customer.cpp.o" \
 "CMakeFiles/SPL_HW1.dir/src/SweatyCustomer.cpp.o" \
 "CMakeFiles/SPL_HW1.dir/src/CheapCustomer.cpp.o" \
-"CMakeFiles/SPL_HW1.dir/src/Trainer.cpp.o"
+"CMakeFiles/SPL_HW1.dir/src/Trainer.cpp.o" \
+"CMakeFiles/SPL_HW1.dir/src/BaseAction.cpp.o" \
+"CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.o" \
+"CMakeFiles/SPL_HW1.dir/src/Studio.cpp.o"
 
 # External object files for target SPL_HW1
 SPL_HW1_EXTERNAL_OBJECTS =
@@ -162,9 +204,12 @@ SPL_HW1: CMakeFiles/SPL_HW1.dir/src/Customer.cpp.o
 SPL_HW1: CMakeFiles/SPL_HW1.dir/src/SweatyCustomer.cpp.o
 SPL_HW1: CMakeFiles/SPL_HW1.dir/src/CheapCustomer.cpp.o
 SPL_HW1: CMakeFiles/SPL_HW1.dir/src/Trainer.cpp.o
+SPL_HW1: CMakeFiles/SPL_HW1.dir/src/BaseAction.cpp.o
+SPL_HW1: CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.o
+SPL_HW1: CMakeFiles/SPL_HW1.dir/src/Studio.cpp.o
 SPL_HW1: CMakeFiles/SPL_HW1.dir/build.make
 SPL_HW1: CMakeFiles/SPL_HW1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable SPL_HW1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable SPL_HW1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SPL_HW1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

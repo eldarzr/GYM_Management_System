@@ -99,10 +99,19 @@
 		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/include/Workout.h">
 			<Option target="SPL_HW1"/>
 		</Unit>
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/BaseAction.cpp">
+			<Option target="SPL_HW1"/>
+		</Unit>
 		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/CheapCustomer.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
 		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/Customer.cpp">
+			<Option target="SPL_HW1"/>
+		</Unit>
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/OpenTrainer.cpp">
+			<Option target="SPL_HW1"/>
+		</Unit>
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/Studio.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
 		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/SweatyCustomer.cpp">
