@@ -41,7 +41,9 @@ CMakeFiles/SPL_HW1.dir/src/Workout.cpp.o
  /home/spl211/CLionProjects/SPL_HW1/include/Workout.h
  /home/spl211/CLionProjects/SPL_HW1/src/Workout.cpp
 CMakeFiles/SPL_HW1.dir/src/main.cpp.o
+ /home/spl211/CLionProjects/SPL_HW1/include/Action.h
  /home/spl211/CLionProjects/SPL_HW1/include/Customer.h
+ /home/spl211/CLionProjects/SPL_HW1/include/Studio.h
  /home/spl211/CLionProjects/SPL_HW1/include/Trainer.h
  /home/spl211/CLionProjects/SPL_HW1/include/Workout.h
  /home/spl211/CLionProjects/SPL_HW1/src/main.cpp

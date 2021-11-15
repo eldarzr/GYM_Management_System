@@ -46,9 +46,7 @@ Workout.h
 string
 -
 
-/home/spl211/CLionProjects/SPL_HW1/src/OpenTrainer.cpp
-../include/Action.h
-/home/spl211/CLionProjects/SPL_HW1/include/Action.h
+/home/spl211/CLionProjects/SPL_HW1/src/Studio.cpp
 ../include/Studio.h
 /home/spl211/CLionProjects/SPL_HW1/include/Studio.h
 

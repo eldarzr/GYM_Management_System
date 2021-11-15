@@ -38,7 +38,7 @@ public:
     OpenTrainer(int id, std::vector<Customer *> &customersList);
     OpenTrainer(const OpenTrainer& other);
     virtual ~OpenTrainer();
-    virtual OpenTrainer* clone();
+    virtual BaseAction* clone();
     virtual void operator=(const OpenTrainer& other);
     OpenTrainer(OpenTrainer&& other);
     virtual void operator=(const OpenTrainer&& other);

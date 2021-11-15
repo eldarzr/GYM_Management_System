@@ -1,4 +1,4 @@
-//#include "Studio.h"
+#include "../include/Studio.h"
 #include "../include/Workout.h"
 #include "../include/Customer.h"
 #include "../include/Trainer.h"
@@ -15,15 +15,25 @@ void testTrainer();
 
 int main(int argc, char** argv){
 
+    Studio s;
+    s.start();
 
+
+/*
     workouts.push_back(Workout(0,"Yoga",90,ANAEROBIC));
     workouts.push_back(Workout(1,"Pilates",110,ANAEROBIC));
     workouts.push_back(Workout(2,"Spinning",120,MIXED));
     workouts.push_back(Workout(3,"Zumba",100,CARDIO));
     workouts.push_back(Workout(4,"Rope Jumps",70,CARDIO));
     workouts.push_back(Workout(5,"CrossFit",140,MIXED));
-
-    testTrainer();
+    Trainer* t1 = new Trainer(4);
+    Customer* c1 = new SweatyCustomer("dani", 0);
+    Customer* c2 = new SweatyCustomer("shlom", 1);
+    Customer* c3 = new SweatyCustomer("avi", 2);
+    t1->addCustomer(c1);
+    t1->addCustomer(c2);
+    t1->addCustomer(c3);
+    testTrainer();*/
 
 //    Customer* swt = new SweatyCustomer("shalom", 1);
 //    CheapCustomer chp("david", 2);
@@ -47,20 +57,3 @@ int main(int argc, char** argv){
     return 0;
 }
 
-void testTrainer() {
-    Trainer* t1 = new Trainer(4);
-    Customer* c1 = new SweatyCustomer("dani", 0);
-    Customer* c2 = new SweatyCustomer("shlom", 1);
-    Customer* c3 = new SweatyCustomer("avi", 2);
-    t1->addCustomer(c1);
-    t1->addCustomer(c2);
-    t1->addCustomer(c3);
-    t1->order(1,c1->order(workouts),workouts);
-
-    Trainer t2(*t1);
-    Customer* c = t1->getCustomer(0);
-    delete t1;
-//    cout<<c->getName()<<endl;
-//    cout<<c->getName()<<endl;
-//    delete c;
-}

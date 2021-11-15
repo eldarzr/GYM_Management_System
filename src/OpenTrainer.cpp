@@ -18,9 +18,22 @@ void OpenTrainer::clear(){
     customers.clear();
     BaseAction::clear();
 }
-//OpenTrainer::OpenTrainer* clone(){ return new OpenTrainer(4, new std::vector<Customer>);}
-void OpenTrainer::operator=(const OpenTrainer& other){}
-void OpenTrainer::operator=(const OpenTrainer&& other){}
+
+BaseAction* OpenTrainer::clone() {
+    return new OpenTrainer(*this);
+}
+
+void OpenTrainer::operator=(const OpenTrainer& other){
+    clear();
+    copy(other);
+    BaseAction::operator=(other);
+}
+void OpenTrainer::operator=(const OpenTrainer&& other){
+    clear();
+    copy(other);
+    BaseAction::operator=(other);
+    clear();
+}
 
 void OpenTrainer::copy(const OpenTrainer& other) {
     for(int i=0; i<other.customers.size(); i++)

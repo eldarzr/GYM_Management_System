@@ -4,7 +4,40 @@
 
 #include "../include/Studio.h"
 
-Studio::Studio(){}
+void Studio::start(){
+    BaseAction* action = new OpenTrainer(0,trainers[0]->getCustomers());
+    action->act(*this);
+    actionsLog.push_back(action);
+    if(action->getStatus() == COMPLETED)
+        std::cout<<"compleated"<<std::endl;
+    else
+        std::cout<<action->toString()<<std::endl;
+    action = new OpenTrainer(0,trainers[0]->getCustomers());
+    action->act(*this);
+    actionsLog.push_back(action);
+    if(action->getStatus() == COMPLETED)
+        std::cout<<"compleated"<<std::endl;
+    else
+        std::cout<<action->toString()<<std::endl;
+}
+
+Studio::Studio(){
+    workout_options.push_back(Workout(0,"Yoga",90,ANAEROBIC));
+    workout_options.push_back(Workout(1,"Pilates",110,ANAEROBIC));
+    workout_options.push_back(Workout(2,"Spinning",120,MIXED));
+    workout_options.push_back(Workout(3,"Zumba",100,CARDIO));
+    workout_options.push_back(Workout(4,"Rope Jumps",70,CARDIO));
+    workout_options.push_back(Workout(5,"CrossFit",140,MIXED));
+    trainers.push_back(new Trainer(4));
+    Customer* c1 = new SweatyCustomer("dani", 0);
+    Customer* c2 = new SweatyCustomer("shlom", 1);
+    Customer* c3 = new SweatyCustomer("avi", 2);
+    trainers[0]->addCustomer(c1);
+    trainers[0]->addCustomer(c2);
+    trainers[0]->addCustomer(c3);
+}
+
+
 Studio::Studio(const Studio &other){
     copy(other);
 }
@@ -47,7 +80,6 @@ Studio& Studio::operator = (Studio && other){
 }
 
 Studio::Studio(const std::string &configFilePath){}
-void Studio::start(){}
 int Studio::getNumOfTrainers() const{ return trainers.size();}
 Trainer* Studio::getTrainer(int tid){
     if(tid >= trainers.size() )
