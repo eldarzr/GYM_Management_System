@@ -83,3 +83,7 @@ bool Trainer::isCustomerExist(int id){
 
 bool Trainer::isOpen(){return open;}
 void Trainer::openTrainer() {open = true;}
+
+Trainer* Trainer::clone() {
+    return new Trainer(*this);
+}

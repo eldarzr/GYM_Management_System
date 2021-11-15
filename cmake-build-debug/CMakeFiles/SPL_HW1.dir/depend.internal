@@ -18,15 +18,10 @@ CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.o
  /home/spl211/SPL_HW1/include/Action.h
  /home/spl211/SPL_HW1/include/Customer.h
  /home/spl211/SPL_HW1/include/Studio.h
- /home/spl211/SPL_HW1/include/Trainer.h
  /home/spl211/SPL_HW1/include/Workout.h
  /home/spl211/SPL_HW1/src/OpenTrainer.cpp
 CMakeFiles/SPL_HW1.dir/src/Studio.cpp.o
- /home/spl211/SPL_HW1/include/Action.h
- /home/spl211/SPL_HW1/include/Customer.h
  /home/spl211/SPL_HW1/include/Studio.h
- /home/spl211/SPL_HW1/include/Trainer.h
- /home/spl211/SPL_HW1/include/Workout.h
  /home/spl211/SPL_HW1/src/Studio.cpp
 CMakeFiles/SPL_HW1.dir/src/SweatyCustomer.cpp.o
  /home/spl211/SPL_HW1/include/Customer.h

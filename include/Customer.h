@@ -51,6 +51,7 @@ public:
     HeavyMuscleCustomer(std::string name, int id);
     std::vector<int> order(const std::vector<Workout> &workout_options);
     std::string toString() const;
+
 private:
 };
 

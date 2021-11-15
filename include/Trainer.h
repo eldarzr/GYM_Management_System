@@ -27,6 +27,9 @@ public:
     void closeTrainer();
     int getSalary();
     bool isOpen();
+
+    Trainer* clone();
+
 private:
     int capacity;
     bool open;

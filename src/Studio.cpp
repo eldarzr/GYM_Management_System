@@ -12,7 +12,7 @@ void Studio::copy(const Studio &other){
     open = other.open;
 
     for(int i=0; i<other.trainers.size(); i++){
-        //trainers.push_back(other.trainers[i]->clone());
+        trainers.push_back(other.trainers[i]->clone());
     }
     for(int i=0; i<other.workout_options.size(); i++){
         workout_options.push_back(other.workout_options[i]);
