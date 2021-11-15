@@ -13,8 +13,8 @@ public:
     Trainer(const Trainer& other);
     Trainer& operator=(const Trainer& other);
     virtual ~Trainer();
-    Trainer(const Trainer&& other);
-    Trainer& operator=(const Trainer&& other);
+    Trainer(Trainer&& other);
+    Trainer& operator=(Trainer&& other);
 
     int getCapacity() const;
     void addCustomer(Customer* customer);
