@@ -25,20 +25,32 @@ void Trainer::copy(const Trainer& other) {
     }
 }
 Trainer& Trainer::operator=(const Trainer& other){
-    if(&other == this)
-        return *this;
-    clear();
-    capacity = other.capacity;
-    open = other.open;
-    copy(other);
+    if(&other != this) {
+        clear();
+        capacity = other.capacity;
+        open = other.open;
+        copy(other);
+    }
     return *this;
 }
 
 Trainer::~Trainer(){
     clear();
 }
-//Trainer(const Trainer&& other){}
-//Trainer& operator=(const Trainer&& other);
+
+Trainer::Trainer(Trainer&& other):capacity(other.capacity), open(other.open){
+    copy(other);
+    other.clear();
+}
+Trainer& Trainer::operator=(Trainer&& other){
+    if(&other != this) {
+        clear();
+        capacity = other.capacity;
+        open = other.open;
+        copy(other);
+    }
+    return *this;
+}
 
 int Trainer::getCapacity() const {return capacity;}
 void Trainer::addCustomer(Customer* customer) {

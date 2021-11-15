@@ -6,12 +6,17 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /home/spl211/SPL_HW1/include/Action.h
+=======
+/home/spl211/CLionProjects/SPL_HW1/include/Action.h
+>>>>>>> 91f0d15984c515d681f1d8c5a12a20991be76f89
 string
 -
 iostream
 -
 Customer.h
+<<<<<<< HEAD
 /home/spl211/SPL_HW1/include/Customer.h
 
 /home/spl211/SPL_HW1/include/Customer.h
@@ -23,6 +28,11 @@ Workout.h
 /home/spl211/SPL_HW1/include/Workout.h
 
 /home/spl211/SPL_HW1/include/Studio.h
+=======
+/home/spl211/CLionProjects/SPL_HW1/include/Customer.h
+
+/home/spl211/CLionProjects/SPL_HW1/include/Customer.h
+>>>>>>> 91f0d15984c515d681f1d8c5a12a20991be76f89
 vector
 -
 string
@@ -34,7 +44,23 @@ Trainer.h
 Action.h
 /home/spl211/SPL_HW1/include/Action.h
 
+<<<<<<< HEAD
 /home/spl211/SPL_HW1/include/Trainer.h
+=======
+/home/spl211/CLionProjects/SPL_HW1/include/Studio.h
+vector
+-
+string
+-
+Workout.h
+/home/spl211/CLionProjects/SPL_HW1/include/Workout.h
+Trainer.h
+/home/spl211/CLionProjects/SPL_HW1/include/Trainer.h
+Action.h
+/home/spl211/CLionProjects/SPL_HW1/include/Action.h
+
+/home/spl211/CLionProjects/SPL_HW1/include/Trainer.h
+>>>>>>> 91f0d15984c515d681f1d8c5a12a20991be76f89
 vector
 -
 Customer.h
@@ -46,9 +72,39 @@ Workout.h
 string
 -
 
+<<<<<<< HEAD
 /home/spl211/SPL_HW1/src/OpenTrainer.cpp
 ../include/Action.h
 /home/spl211/SPL_HW1/include/Action.h
 ../include/Studio.h
 /home/spl211/SPL_HW1/include/Studio.h
+=======
+/home/spl211/CLionProjects/SPL_HW1/src/BaseAction.cpp
+../include/Action.h
+/home/spl211/CLionProjects/SPL_HW1/include/Action.h
+
+/home/spl211/CLionProjects/SPL_HW1/src/OpenTrainer.cpp
+../include/Action.h
+/home/spl211/CLionProjects/SPL_HW1/include/Action.h
+../include/Studio.h
+/home/spl211/CLionProjects/SPL_HW1/include/Studio.h
+
+/home/spl211/CLionProjects/SPL_HW1/src/Studio.cpp
+../include/Studio.h
+/home/spl211/CLionProjects/SPL_HW1/include/Studio.h
+
+/home/spl211/CLionProjects/SPL_HW1/src/Trainer.cpp
+../include/Trainer.h
+/home/spl211/CLionProjects/SPL_HW1/include/Trainer.h
+>>>>>>> 91f0d15984c515d681f1d8c5a12a20991be76f89
+
+/home/spl211/CLionProjects/SPL_HW1/src/main.cpp
+../include/Workout.h
+/home/spl211/CLionProjects/SPL_HW1/include/Workout.h
+../include/Customer.h
+/home/spl211/CLionProjects/SPL_HW1/include/Customer.h
+../include/Trainer.h
+/home/spl211/CLionProjects/SPL_HW1/include/Trainer.h
+iostream
+-
 
