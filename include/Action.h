@@ -31,6 +31,13 @@ private:
 class OpenTrainer : public BaseAction {
 public:
     OpenTrainer(int id, std::vector<Customer *> &customersList);
+    OpenTrainer(const OpenTrainer& other);
+    virtual ~OpenTrainer();
+    virtual OpenTrainer* clone();
+    virtual void operator=(const OpenTrainer& other);
+    OpenTrainer(const OpenTrainer&& other);
+    virtual void operator=(const OpenTrainer&& other);
+
     void act(Studio &studio);
     std::string toString() const;
 private:
