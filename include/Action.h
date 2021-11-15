@@ -15,6 +15,9 @@ class Studio;
 class BaseAction{
 public:
     BaseAction();
+    BaseAction(const BaseAction& other);
+    virtual BaseAction* operator=(const BaseAction& other);
+    virtual ~BaseAction();
     ActionStatus getStatus() const;
     virtual void act(Studio& studio)=0;
     virtual std::string toString() const=0;
@@ -23,6 +26,7 @@ protected:
     void complete();
     void error(std::string errorMsg);
     std::string getErrorMsg() const;
+    virtual void clear();
 private:
     std::string errorMsg;
     ActionStatus status;
@@ -36,12 +40,14 @@ public:
     virtual ~OpenTrainer();
     virtual OpenTrainer* clone();
     virtual void operator=(const OpenTrainer& other);
-    OpenTrainer(const OpenTrainer&& other);
+    OpenTrainer(OpenTrainer&& other);
     virtual void operator=(const OpenTrainer&& other);
 
     void act(Studio &studio);
     std::string toString() const;
 private:
+    void copy(const OpenTrainer& other);
+    void clear();
     const int trainerId;
     std::vector<Customer *> customers;
 };

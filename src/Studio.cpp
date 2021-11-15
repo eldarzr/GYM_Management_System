@@ -49,7 +49,10 @@ Studio& Studio::operator = (Studio && other){
 Studio::Studio(const std::string &configFilePath){}
 void Studio::start(){}
 int Studio::getNumOfTrainers() const{ return trainers.size();}
-Trainer* Studio::getTrainer(int tid){return trainers[tid];}
+Trainer* Studio::getTrainer(int tid){
+    if(tid >= trainers.size() )
+        return nullptr;
+    return trainers[tid];}
 const std::vector<BaseAction*>& Studio::getActionsLog() const{return actionsLog;} // Return a reference to the history of actions
 std::vector<Workout>& Studio::getWorkoutOptions(){return workout_options;}
 

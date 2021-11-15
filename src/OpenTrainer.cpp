@@ -5,17 +5,38 @@
 #include "../include/Action.h"
 #include "../include/Studio.h"
 
-//OpenTrainer::OpenTrainer(int id, std::vector<Customer *> &customersList):BaseAction(), trainerId(id), customers(customersList) {}
+OpenTrainer::OpenTrainer(int id, std::vector<Customer *> &customersList):BaseAction(), trainerId(id), customers(customersList) {}
+OpenTrainer::OpenTrainer(const OpenTrainer& other): BaseAction(other), trainerId(other.trainerId){
+    copy(other);
+}
+OpenTrainer::OpenTrainer(OpenTrainer&& other): BaseAction(other), trainerId(other.trainerId){
+    copy(other);
+    other.clear();
+}
+OpenTrainer::~OpenTrainer(){}
+void OpenTrainer::clear(){
+    customers.clear();
+    BaseAction::clear();
+}
+//OpenTrainer::OpenTrainer* clone(){ return new OpenTrainer(4, new std::vector<Customer>);}
+void OpenTrainer::operator=(const OpenTrainer& other){}
+void OpenTrainer::operator=(const OpenTrainer&& other){}
+
+void OpenTrainer::copy(const OpenTrainer& other) {
+    for(int i=0; i<other.customers.size(); i++)
+        customers.push_back(other.customers[i]->clone());
+}
+
 void OpenTrainer::act(Studio &studio){
-    Trainer* t = studio.getTrainer(trainerId);
-    if(t == nullptr || t->isOpen())
+    Trainer* trainer = studio.getTrainer(trainerId);
+    if(trainer == nullptr || trainer->isOpen())
         this->error("Workout session does not exist or is already open");
     else{
         for(int i=0; i<customers.size(); i++) {
-            t->addCustomer(customers[i]);
-            t->order(customers[i]->getId(),customers[i]->order(studio.getWorkoutOptions()),studio.getWorkoutOptions());
+            trainer->addCustomer(customers[i]);
+            trainer->order(customers[i]->getId(),customers[i]->order(studio.getWorkoutOptions()),studio.getWorkoutOptions());
         }
-        t->openTrainer();
+        trainer->openTrainer();
         this->complete();
     }
 }

@@ -6,6 +6,12 @@
 
 
 BaseAction::BaseAction(){}
+BaseAction::BaseAction(const BaseAction& other):errorMsg(other.errorMsg), status(other.status){}
+BaseAction* BaseAction::operator=(const BaseAction& other){
+    errorMsg = other.errorMsg;
+    status = other.status;
+}
+BaseAction::~BaseAction(){ clear();}
 ActionStatus BaseAction::getStatus() const{return status;}
 void BaseAction::complete(){ status=COMPLETED;}
 void BaseAction::error(std::string errorMsg){
@@ -13,3 +19,7 @@ void BaseAction::error(std::string errorMsg){
     status = ERROR;
 }
 std::string BaseAction::getErrorMsg() const{return errorMsg;}
+
+void BaseAction::clear() {
+    errorMsg = "";
+}
