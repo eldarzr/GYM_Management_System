@@ -5,7 +5,7 @@
 #include "../include/Action.h"
 #include "../include/Studio.h"
 
-OpenTrainer::OpenTrainer(int id, std::vector<Customer *> &customersList):BaseAction(), trainerId(id), customers(customersList) {}
+//OpenTrainer::OpenTrainer(int id, std::vector<Customer *> &customersList):BaseAction(), trainerId(id), customers(customersList) {}
 void OpenTrainer::act(Studio &studio){
     Trainer* t = studio.getTrainer(trainerId);
     if(t == nullptr || t->isOpen())

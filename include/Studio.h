@@ -12,6 +12,13 @@ class Studio{
 public:
     Studio();
     Studio(const std::string &configFilePath);
+    Studio(const Studio &other);
+    virtual  ~Studio();
+    Studio & operator = (const Studio &other);
+    Studio(Studio &&otherStudio);
+    Studio & operator = (Studio && other);
+    void copy(const Studio &other);
+
     void start();
     int getNumOfTrainers() const;
     Trainer* getTrainer(int tid);
@@ -23,6 +30,8 @@ private:
     std::vector<Trainer*> trainers;
     std::vector<Workout> workout_options;
     std::vector<BaseAction*> actionsLog;
+
+    void clear();
 };
 
 #endif
