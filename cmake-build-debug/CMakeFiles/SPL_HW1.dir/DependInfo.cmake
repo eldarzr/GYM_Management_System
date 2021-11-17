@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/spl211/SPL_HW1/src/Customer.cpp" "/home/spl211/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/Customer.cpp.o"
   "/home/spl211/SPL_HW1/src/FullBodyCustomer.cpp" "/home/spl211/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/FullBodyCustomer.cpp.o"
   "/home/spl211/SPL_HW1/src/HeavyMuscleCustomer.cpp" "/home/spl211/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/HeavyMuscleCustomer.cpp.o"
+  "/home/spl211/SPL_HW1/src/MoveCustomer.cpp" "/home/spl211/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.o"
   "/home/spl211/SPL_HW1/src/OpenTrainer.cpp" "/home/spl211/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.o"
   "/home/spl211/SPL_HW1/src/Order.cpp" "/home/spl211/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/Order.cpp.o"
   "/home/spl211/SPL_HW1/src/Studio.cpp" "/home/spl211/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/Studio.cpp.o"

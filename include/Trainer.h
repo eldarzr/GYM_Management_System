@@ -25,14 +25,18 @@ public:
     void order(const int customer_id, const std::vector<int> workout_ids, const std::vector<Workout>& workout_options);
     void openTrainer();
     void closeTrainer();
+    int setSalary();
     int getSalary();
     bool isOpen();
 
     Trainer* clone();
 
+    void setSalary(int salary);
+
 private:
     int capacity;
     bool open;
+    int salary;
     std::vector<Customer*> customersList;
     std::vector<OrderPair> orderList; //A list of pairs for each order for the trainer - (customer_id, Workout)
     void clear();

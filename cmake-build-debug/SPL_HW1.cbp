@@ -114,6 +114,9 @@
 		<Unit filename="/home/spl211/SPL_HW1/src/HeavyMuscleCustomer.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
+		<Unit filename="/home/spl211/SPL_HW1/src/MoveCustomer.cpp">
+			<Option target="SPL_HW1"/>
+		</Unit>
 		<Unit filename="/home/spl211/SPL_HW1/src/OpenTrainer.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>

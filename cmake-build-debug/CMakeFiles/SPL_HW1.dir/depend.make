@@ -22,6 +22,13 @@ CMakeFiles/SPL_HW1.dir/src/HeavyMuscleCustomer.cpp.o: \
  ../include/Customer.h \
  ../include/Workout.h \
  ../src/HeavyMuscleCustomer.cpp
+CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.o: \
+ ../include/Action.h \
+ ../include/Customer.h \
+ ../include/Studio.h \
+ ../include/Trainer.h \
+ ../include/Workout.h \
+ ../src/MoveCustomer.cpp
 CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.o: \
  ../include/Action.h \
  ../include/Customer.h \

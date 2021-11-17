@@ -4,8 +4,8 @@
 
 #include "../include/Trainer.h"
 
-Trainer::Trainer(int t_capacity): capacity(t_capacity), open(false) {}
-Trainer::Trainer(const Trainer& other):capacity(other.capacity), open(other.open){
+Trainer::Trainer(int t_capacity): capacity(t_capacity), open(false) ,salary(0){}
+Trainer::Trainer(const Trainer& other):capacity(other.capacity), open(other.open),salary(other.salary){
     copy(other);
 }
 
@@ -68,6 +68,13 @@ std::vector<Customer*>& Trainer::getCustomers() {
     return customersList;
 }
 
+void Trainer::setSalary(int salary) {
+    Trainer::salary = salary;
+}
+int Trainer::getSalary() {
+    return salary;
+}
+
 void Trainer::order(const int customer_id, const std::vector<int> workout_ids, const std::vector<Workout>& workout_options){
     for(int i=0; i<workout_ids.size(); i++)
         orderList.push_back(OrderPair(customer_id, workout_options[workout_ids[i]]));
@@ -83,6 +90,7 @@ bool Trainer::isCustomerExist(int id){
 
 bool Trainer::isOpen(){return open;}
 void Trainer::openTrainer() {open = true;}
+void Trainer::closeTrainer() {open = false;} // close trainer
 
 Trainer* Trainer::clone() {
     return new Trainer(*this);

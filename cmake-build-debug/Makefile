@@ -249,6 +249,30 @@ src/HeavyMuscleCustomer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/HeavyMuscleCustomer.cpp.s
 .PHONY : src/HeavyMuscleCustomer.cpp.s
 
+src/MoveCustomer.o: src/MoveCustomer.cpp.o
+.PHONY : src/MoveCustomer.o
+
+# target to build an object file
+src/MoveCustomer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.o
+.PHONY : src/MoveCustomer.cpp.o
+
+src/MoveCustomer.i: src/MoveCustomer.cpp.i
+.PHONY : src/MoveCustomer.i
+
+# target to preprocess a source file
+src/MoveCustomer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.i
+.PHONY : src/MoveCustomer.cpp.i
+
+src/MoveCustomer.s: src/MoveCustomer.cpp.s
+.PHONY : src/MoveCustomer.s
+
+# target to generate assembly for a file
+src/MoveCustomer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.s
+.PHONY : src/MoveCustomer.cpp.s
+
 src/OpenTrainer.o: src/OpenTrainer.cpp.o
 .PHONY : src/OpenTrainer.o
 
@@ -441,6 +465,9 @@ help:
 	@echo "... src/HeavyMuscleCustomer.o"
 	@echo "... src/HeavyMuscleCustomer.i"
 	@echo "... src/HeavyMuscleCustomer.s"
+	@echo "... src/MoveCustomer.o"
+	@echo "... src/MoveCustomer.i"
+	@echo "... src/MoveCustomer.s"
 	@echo "... src/OpenTrainer.o"
 	@echo "... src/OpenTrainer.i"
 	@echo "... src/OpenTrainer.s"

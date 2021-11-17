@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/SPL_HW1.dir/src/Customer.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/FullBodyCustomer.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/HeavyMuscleCustomer.cpp.o"
+  "CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/Order.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/Studio.cpp.o"

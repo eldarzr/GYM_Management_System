@@ -69,11 +69,14 @@ class MoveCustomer : public BaseAction {
 public:
     MoveCustomer(int src, int dst, int customerId);
     void act(Studio &studio);
+    virtual BaseAction* clone();
     std::string toString() const;
+    bool isCustomerExists(Studio &std);
 private:
     const int srcTrainer;
     const int dstTrainer;
     const int id;
+
 };
 
 
