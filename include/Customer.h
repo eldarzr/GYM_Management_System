@@ -50,6 +50,9 @@ class HeavyMuscleCustomer : public Customer {
 public:
     HeavyMuscleCustomer(std::string name, int id);
     std::vector<int> order(const std::vector<Workout> &workout_options);
+    HeavyMuscleCustomer(const HeavyMuscleCustomer& other);
+    virtual ~HeavyMuscleCustomer();
+    virtual Customer* clone();
     std::string toString() const;
 
 private:
@@ -59,6 +62,9 @@ private:
 class FullBodyCustomer : public Customer {
 public:
     FullBodyCustomer(std::string name, int id);
+    FullBodyCustomer(const FullBodyCustomer& other);
+    virtual ~FullBodyCustomer();
+    virtual Customer* clone();
     std::vector<int> order(const std::vector<Workout> &workout_options);
     std::string toString() const;
 private:

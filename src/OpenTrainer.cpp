@@ -47,7 +47,7 @@ void OpenTrainer::act(Studio &studio){
     else{
         for(int i=0; i<customers.size(); i++) {
             trainer->addCustomer(customers[i]);
-            trainer->order(customers[i]->getId(),customers[i]->order(studio.getWorkoutOptions()),studio.getWorkoutOptions());
+            //trainer->order(customers[i]->getId(),customers[i]->order(studio.getWorkoutOptions()),studio.getWorkoutOptions());
         }
         trainer->openTrainer();
         this->complete();

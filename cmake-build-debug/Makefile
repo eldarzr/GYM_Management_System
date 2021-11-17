@@ -57,10 +57,10 @@ RM = /home/spl211/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/spl211/CLionProjects/SPL_HW1
+CMAKE_SOURCE_DIR = /home/spl211/SPL_HW1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/spl211/CLionProjects/SPL_HW1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/spl211/SPL_HW1/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles /home/spl211/CLionProjects/SPL_HW1/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/SPL_HW1/cmake-build-debug/CMakeFiles /home/spl211/SPL_HW1/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/SPL_HW1/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -201,6 +201,54 @@ src/Customer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Customer.cpp.s
 .PHONY : src/Customer.cpp.s
 
+src/FullBodyCustomer.o: src/FullBodyCustomer.cpp.o
+.PHONY : src/FullBodyCustomer.o
+
+# target to build an object file
+src/FullBodyCustomer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/FullBodyCustomer.cpp.o
+.PHONY : src/FullBodyCustomer.cpp.o
+
+src/FullBodyCustomer.i: src/FullBodyCustomer.cpp.i
+.PHONY : src/FullBodyCustomer.i
+
+# target to preprocess a source file
+src/FullBodyCustomer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/FullBodyCustomer.cpp.i
+.PHONY : src/FullBodyCustomer.cpp.i
+
+src/FullBodyCustomer.s: src/FullBodyCustomer.cpp.s
+.PHONY : src/FullBodyCustomer.s
+
+# target to generate assembly for a file
+src/FullBodyCustomer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/FullBodyCustomer.cpp.s
+.PHONY : src/FullBodyCustomer.cpp.s
+
+src/HeavyMuscleCustomer.o: src/HeavyMuscleCustomer.cpp.o
+.PHONY : src/HeavyMuscleCustomer.o
+
+# target to build an object file
+src/HeavyMuscleCustomer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/HeavyMuscleCustomer.cpp.o
+.PHONY : src/HeavyMuscleCustomer.cpp.o
+
+src/HeavyMuscleCustomer.i: src/HeavyMuscleCustomer.cpp.i
+.PHONY : src/HeavyMuscleCustomer.i
+
+# target to preprocess a source file
+src/HeavyMuscleCustomer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/HeavyMuscleCustomer.cpp.i
+.PHONY : src/HeavyMuscleCustomer.cpp.i
+
+src/HeavyMuscleCustomer.s: src/HeavyMuscleCustomer.cpp.s
+.PHONY : src/HeavyMuscleCustomer.s
+
+# target to generate assembly for a file
+src/HeavyMuscleCustomer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/HeavyMuscleCustomer.cpp.s
+.PHONY : src/HeavyMuscleCustomer.cpp.s
+
 src/OpenTrainer.o: src/OpenTrainer.cpp.o
 .PHONY : src/OpenTrainer.o
 
@@ -224,6 +272,30 @@ src/OpenTrainer.s: src/OpenTrainer.cpp.s
 src/OpenTrainer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.s
 .PHONY : src/OpenTrainer.cpp.s
+
+src/Order.o: src/Order.cpp.o
+.PHONY : src/Order.o
+
+# target to build an object file
+src/Order.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Order.cpp.o
+.PHONY : src/Order.cpp.o
+
+src/Order.i: src/Order.cpp.i
+.PHONY : src/Order.i
+
+# target to preprocess a source file
+src/Order.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Order.cpp.i
+.PHONY : src/Order.cpp.i
+
+src/Order.s: src/Order.cpp.s
+.PHONY : src/Order.s
+
+# target to generate assembly for a file
+src/Order.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Order.cpp.s
+.PHONY : src/Order.cpp.s
 
 src/Studio.o: src/Studio.cpp.o
 .PHONY : src/Studio.o
@@ -363,9 +435,18 @@ help:
 	@echo "... src/Customer.o"
 	@echo "... src/Customer.i"
 	@echo "... src/Customer.s"
+	@echo "... src/FullBodyCustomer.o"
+	@echo "... src/FullBodyCustomer.i"
+	@echo "... src/FullBodyCustomer.s"
+	@echo "... src/HeavyMuscleCustomer.o"
+	@echo "... src/HeavyMuscleCustomer.i"
+	@echo "... src/HeavyMuscleCustomer.s"
 	@echo "... src/OpenTrainer.o"
 	@echo "... src/OpenTrainer.i"
 	@echo "... src/OpenTrainer.s"
+	@echo "... src/Order.o"
+	@echo "... src/Order.i"
+	@echo "... src/Order.s"
 	@echo "... src/Studio.o"
 	@echo "... src/Studio.i"
 	@echo "... src/Studio.s"

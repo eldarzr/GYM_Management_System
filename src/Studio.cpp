@@ -5,20 +5,30 @@
 #include "../include/Studio.h"
 
 void Studio::start(){
-    BaseAction* action = new OpenTrainer(0,trainers[0]->getCustomers());
+    std::vector<Customer*> c;
+    c.push_back(new SweatyCustomer("dani", 0));
+    c.push_back(new SweatyCustomer("shalom", 1));
+    c.push_back(new HeavyMuscleCustomer("avi", 2));
+    c.push_back(new FullBodyCustomer("avraham", 3));
+    c.push_back(new CheapCustomer("moyal", 4));
+
+    BaseAction* action = new OpenTrainer(0,c);
+    action->act(*this);
+    actionsLog.push_back(action);
+    action = new Order(0);
+    action->act(*this);
+    actionsLog.push_back(action);
+/*    if(action->getStatus() == COMPLETED)
+        std::cout<<"compleated"<<std::endl;
+    else
+        std::cout<<action->toString()<<std::endl;*/
+/*    action = new OpenTrainer(0,trainers[0]->getCustomers());
     action->act(*this);
     actionsLog.push_back(action);
     if(action->getStatus() == COMPLETED)
         std::cout<<"compleated"<<std::endl;
     else
-        std::cout<<action->toString()<<std::endl;
-    action = new OpenTrainer(0,trainers[0]->getCustomers());
-    action->act(*this);
-    actionsLog.push_back(action);
-    if(action->getStatus() == COMPLETED)
-        std::cout<<"compleated"<<std::endl;
-    else
-        std::cout<<action->toString()<<std::endl;
+        std::cout<<action->toString()<<std::endl;*/
 }
 
 Studio::Studio(){
@@ -29,12 +39,10 @@ Studio::Studio(){
     workout_options.push_back(Workout(4,"Rope Jumps",70,CARDIO));
     workout_options.push_back(Workout(5,"CrossFit",140,MIXED));
     trainers.push_back(new Trainer(4));
-    Customer* c1 = new SweatyCustomer("dani", 0);
-    Customer* c2 = new SweatyCustomer("shlom", 1);
-    Customer* c3 = new SweatyCustomer("avi", 2);
-    trainers[0]->addCustomer(c1);
+
+/*    trainers[0]->addCustomer(c1);
     trainers[0]->addCustomer(c2);
-    trainers[0]->addCustomer(c3);
+    trainers[0]->addCustomer(c3);*/
 }
 
 
@@ -98,6 +106,5 @@ void Studio::clear() {
     trainers.clear();
     actionsLog.clear();
     workout_options.clear();
-
 }
 

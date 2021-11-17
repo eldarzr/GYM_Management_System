@@ -14,6 +14,14 @@ CMakeFiles/SPL_HW1.dir/src/Customer.cpp.o: \
  ../include/Customer.h \
  ../include/Workout.h \
  ../src/Customer.cpp
+CMakeFiles/SPL_HW1.dir/src/FullBodyCustomer.cpp.o: \
+ ../include/Customer.h \
+ ../include/Workout.h \
+ ../src/FullBodyCustomer.cpp
+CMakeFiles/SPL_HW1.dir/src/HeavyMuscleCustomer.cpp.o: \
+ ../include/Customer.h \
+ ../include/Workout.h \
+ ../src/HeavyMuscleCustomer.cpp
 CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.o: \
  ../include/Action.h \
  ../include/Customer.h \
@@ -21,6 +29,13 @@ CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.o: \
  ../include/Trainer.h \
  ../include/Workout.h \
  ../src/OpenTrainer.cpp
+CMakeFiles/SPL_HW1.dir/src/Order.cpp.o: \
+ ../include/Action.h \
+ ../include/Customer.h \
+ ../include/Studio.h \
+ ../include/Trainer.h \
+ ../include/Workout.h \
+ ../src/Order.cpp
 CMakeFiles/SPL_HW1.dir/src/Studio.cpp.o: \
  ../include/Action.h \
  ../include/Customer.h \

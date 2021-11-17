@@ -57,7 +57,9 @@ class Order : public BaseAction {
 public:
     Order(int id);
     void act(Studio &studio);
+    virtual BaseAction* clone();
     std::string toString() const;
+
 private:
     const int trainerId;
 };
