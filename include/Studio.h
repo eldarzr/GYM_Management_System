@@ -30,6 +30,7 @@ private:
     std::vector<Trainer*> trainers;
     std::vector<Workout> workout_options;
     std::vector<BaseAction*> actionsLog;
+    void init(std::string address);
 
     void clear();
 };

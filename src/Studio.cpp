@@ -3,46 +3,61 @@
 //
 
 #include "../include/Studio.h"
+#include <iostream>
+#include <fstream>
+#include <sstream>
 
 void Studio::start(){
-    std::vector<Customer*> c;
-    c.push_back(new SweatyCustomer("dani", 0));
-    c.push_back(new SweatyCustomer("shalom", 1));
-    c.push_back(new HeavyMuscleCustomer("avi", 2));
-    c.push_back(new FullBodyCustomer("avraham", 3));
-    c.push_back(new CheapCustomer("moyal", 4));
+    int id_customer=0;
+    bool flg = true;
+    while (flg) {
+        std::string input;
+        std::getline( std::cin, input);
+        if (input.find("open") != std::string::npos) {
+            input = input.substr(5);
+            std::stringstream ss_space(input);
 
-    BaseAction* action = new OpenTrainer(0,c);
-    action->act(*this);
-    actionsLog.push_back(action);
-    action = new Order(0);
-    action->act(*this);
-    actionsLog.push_back(action);
-/*    if(action->getStatus() == COMPLETED)
-        std::cout<<"compleated"<<std::endl;
-    else
-        std::cout<<action->toString()<<std::endl;*/
-/*    action = new OpenTrainer(0,trainers[0]->getCustomers());
-    action->act(*this);
-    actionsLog.push_back(action);
-    if(action->getStatus() == COMPLETED)
-        std::cout<<"compleated"<<std::endl;
-    else
-        std::cout<<action->toString()<<std::endl;*/
+            std::string sub;
+            getline(ss_space, sub, ' ');
+            int trainer_num = std::stoi(sub);
+
+            std::vector<Customer *> customers;
+            while (ss_space.good()) {
+                std::string sub;
+                getline(ss_space, sub, ',');
+                std::string name = sub;
+                getline(ss_space, sub, ' ');
+                std::string srg = sub;
+                if (sub.find("swt") != std::string::npos)
+                    customers.push_back(new SweatyCustomer(name, id_customer));
+                if (sub.find("chp") != std::string::npos)
+                    customers.push_back(new CheapCustomer(name, id_customer));
+                if (sub.find("mcl") != std::string::npos)
+                    customers.push_back(new HeavyMuscleCustomer(name, id_customer));
+                if (sub.find("fbd") != std::string::npos)
+                    customers.push_back(new FullBodyCustomer(name, id_customer));
+                id_customer++;
+            }
+            BaseAction *action = new OpenTrainer(trainer_num, customers);
+            action->act(*this);
+            actionsLog.push_back(action);
+        }
+            if (input.find("order") != std::string::npos) {
+                input = input.substr(6);
+                int trainer_num = std::stoi(input);
+                BaseAction* action = new Order(trainer_num);
+                action->act(*this);
+                actionsLog.push_back(action);
+            }
+            if (input.find("close") != std::string::npos) {
+                flg = false;
+            }
+        }
+
 }
 
 Studio::Studio(){
-    workout_options.push_back(Workout(0,"Yoga",90,ANAEROBIC));
-    workout_options.push_back(Workout(1,"Pilates",110,ANAEROBIC));
-    workout_options.push_back(Workout(2,"Spinning",120,MIXED));
-    workout_options.push_back(Workout(3,"Zumba",100,CARDIO));
-    workout_options.push_back(Workout(4,"Rope Jumps",70,CARDIO));
-    workout_options.push_back(Workout(5,"CrossFit",140,MIXED));
-    trainers.push_back(new Trainer(4));
-
-/*    trainers[0]->addCustomer(c1);
-    trainers[0]->addCustomer(c2);
-    trainers[0]->addCustomer(c3);*/
+    init("/home/spl211/ExmapleInput.txt");
 }
 
 
@@ -106,5 +121,78 @@ void Studio::clear() {
     trainers.clear();
     actionsLog.clear();
     workout_options.clear();
+}
+
+void Studio::init(std::string address) {
+
+    int id_counter = 0;
+
+    std::ifstream inFile;
+    inFile.open(address);
+    if (!inFile) {
+        std::cerr << "Unable to open file datafile.txt";
+        exit(1);   // call system to stop
+    }
+
+    std::string line;
+    int num_of_trainer = 0;
+    while(getline(inFile, line)) {
+        int num;
+        std::stringstream ss;
+        ss << line;
+        ss >> num;
+        //trainers number
+        if(num != 0 &  !line.empty() &
+           line.find(",")== std::string::npos) {
+            num_of_trainer = num;
+        }
+
+        //trainers capacities
+        if(num != 0 &  !line.empty() &
+           line.find(",")!= std::string::npos){
+            std::vector<int> capacities;
+            std::stringstream ss_comma(line);
+
+            while (ss_comma.good()){
+                std::string sub;
+                int capacity;
+                ss_comma>>capacity;
+                getline(ss_comma,sub,',');
+                capacities.push_back(capacity);
+            }
+
+            for(int i=0; i<capacities.size(); i++)
+                trainers.push_back(new Trainer(capacities[i]));
+        }
+
+        //workout options
+        if(num == 0 &  !line.empty() & line[0] != '#') {
+            std::vector<std::string> workout_str;
+            std::stringstream ss_comma(line);
+
+            while (ss_comma.good()){
+                std::string sub;
+                getline(ss_comma,sub,',');
+                workout_str.push_back(sub);
+            }
+
+            std::string name = workout_str[0];
+            std::string type_str = workout_str[1];
+            WorkoutType type;
+            if(type_str.find("Anaerobic")!= std::string::npos)
+                type = ANAEROBIC;
+            if(type_str.find("Mixed")!= std::string::npos)
+                type = MIXED;
+            if(type_str.find("Cardio")!= std::string::npos)
+                type = CARDIO;
+
+            std::string price_str = workout_str[2];
+            price_str = price_str.substr(1);
+            int price;
+            price = std::stoi( price_str );
+            workout_options.push_back(Workout(id_counter, name,price,type));
+            id_counter++;
+        }
+    }
 }
 
