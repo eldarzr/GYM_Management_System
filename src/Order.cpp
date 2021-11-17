@@ -18,7 +18,7 @@
 
         std::vector<Customer*>& _allCustomers = trainer->getCustomers();
         std::vector<Workout>& _allWorkout =studio.getWorkoutOptions();
-        for(int i=0;_allCustomers.size();i++){
+        for(int i=0;i<_allCustomers.size();i++){
             std::vector<int> cusPlan=_allCustomers[i]->order(_allWorkout);
             for(int j=0;j<cusPlan.size();j++){
                 std::cout << _allCustomers[i]->getName()<<" Is Doing "<<_allWorkout[cusPlan[j]].getName()<<std::endl;

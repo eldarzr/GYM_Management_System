@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/spl211/SPL_HW1/cmake-build-debug"/>
+				<Option working_dir="/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/spl211/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/spl211/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/spl211/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/spl211/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/spl211/SPL_HW1/cmake-build-debug"/>
+				<Option working_dir="/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/spl211/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/spl211/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/spl211/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/spl211/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/spl211/SPL_HW1/cmake-build-debug"/>
+				<Option working_dir="/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/spl211/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/spl211/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/spl211/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/spl211/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="SPL_HW1">
-				<Option output="/home/spl211/SPL_HW1/cmake-build-debug/SPL_HW1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/spl211/SPL_HW1/cmake-build-debug"/>
+				<Option output="/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/SPL_HW1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -54,15 +54,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/spl211/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 SPL_HW1"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/spl211/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/spl211/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/spl211/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 SPL_HW1"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="SPL_HW1/fast">
-				<Option output="/home/spl211/SPL_HW1/cmake-build-debug/SPL_HW1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/spl211/SPL_HW1/cmake-build-debug"/>
+				<Option output="/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/SPL_HW1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,65 +77,65 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/spl211/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 SPL_HW1/fast"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/spl211/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/spl211/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/spl211/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 SPL_HW1/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/spl211/SPL_HW1/include/Action.h">
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/include/Action.h">
 			<Option target="SPL_HW1"/>
 		</Unit>
-		<Unit filename="/home/spl211/SPL_HW1/include/Customer.h">
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/include/Customer.h">
 			<Option target="SPL_HW1"/>
 		</Unit>
-		<Unit filename="/home/spl211/SPL_HW1/include/Studio.h">
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/include/Studio.h">
 			<Option target="SPL_HW1"/>
 		</Unit>
-		<Unit filename="/home/spl211/SPL_HW1/include/Trainer.h">
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/include/Trainer.h">
 			<Option target="SPL_HW1"/>
 		</Unit>
-		<Unit filename="/home/spl211/SPL_HW1/include/Workout.h">
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/include/Workout.h">
 			<Option target="SPL_HW1"/>
 		</Unit>
-		<Unit filename="/home/spl211/SPL_HW1/src/BaseAction.cpp">
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/BaseAction.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
-		<Unit filename="/home/spl211/SPL_HW1/src/CheapCustomer.cpp">
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/CheapCustomer.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
-		<Unit filename="/home/spl211/SPL_HW1/src/Customer.cpp">
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/Customer.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
-		<Unit filename="/home/spl211/SPL_HW1/src/FullBodyCustomer.cpp">
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/FullBodyCustomer.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
-		<Unit filename="/home/spl211/SPL_HW1/src/HeavyMuscleCustomer.cpp">
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/HeavyMuscleCustomer.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
-		<Unit filename="/home/spl211/SPL_HW1/src/OpenTrainer.cpp">
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/OpenTrainer.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
-		<Unit filename="/home/spl211/SPL_HW1/src/Order.cpp">
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/Order.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
-		<Unit filename="/home/spl211/SPL_HW1/src/Studio.cpp">
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/Studio.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
-		<Unit filename="/home/spl211/SPL_HW1/src/SweatyCustomer.cpp">
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/SweatyCustomer.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
-		<Unit filename="/home/spl211/SPL_HW1/src/Trainer.cpp">
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/Trainer.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
-		<Unit filename="/home/spl211/SPL_HW1/src/Workout.cpp">
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/Workout.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
-		<Unit filename="/home/spl211/SPL_HW1/src/main.cpp">
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/main.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
-		<Unit filename="/home/spl211/SPL_HW1/CMakeLists.txt">
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
