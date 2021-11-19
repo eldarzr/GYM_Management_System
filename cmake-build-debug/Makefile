@@ -321,6 +321,30 @@ src/Order.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Order.cpp.s
 .PHONY : src/Order.cpp.s
 
+src/PrintTrainerStatus.o: src/PrintTrainerStatus.cpp.o
+.PHONY : src/PrintTrainerStatus.o
+
+# target to build an object file
+src/PrintTrainerStatus.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/PrintTrainerStatus.cpp.o
+.PHONY : src/PrintTrainerStatus.cpp.o
+
+src/PrintTrainerStatus.i: src/PrintTrainerStatus.cpp.i
+.PHONY : src/PrintTrainerStatus.i
+
+# target to preprocess a source file
+src/PrintTrainerStatus.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/PrintTrainerStatus.cpp.i
+.PHONY : src/PrintTrainerStatus.cpp.i
+
+src/PrintTrainerStatus.s: src/PrintTrainerStatus.cpp.s
+.PHONY : src/PrintTrainerStatus.s
+
+# target to generate assembly for a file
+src/PrintTrainerStatus.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/PrintTrainerStatus.cpp.s
+.PHONY : src/PrintTrainerStatus.cpp.s
+
 src/Studio.o: src/Studio.cpp.o
 .PHONY : src/Studio.o
 
@@ -474,6 +498,9 @@ help:
 	@echo "... src/Order.o"
 	@echo "... src/Order.i"
 	@echo "... src/Order.s"
+	@echo "... src/PrintTrainerStatus.o"
+	@echo "... src/PrintTrainerStatus.i"
+	@echo "... src/PrintTrainerStatus.s"
 	@echo "... src/Studio.o"
 	@echo "... src/Studio.i"
 	@echo "... src/Studio.s"

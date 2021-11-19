@@ -114,17 +114,16 @@
 		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/HeavyMuscleCustomer.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
-<<<<<<< HEAD
-		<Unit filename="/home/spl211/SPL_HW1/src/MoveCustomer.cpp">
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/MoveCustomer.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
-		<Unit filename="/home/spl211/SPL_HW1/src/OpenTrainer.cpp">
-=======
 		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/OpenTrainer.cpp">
->>>>>>> f625e03ad0a3b4dffd185646cd62708057e4a8d6
 			<Option target="SPL_HW1"/>
 		</Unit>
 		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/Order.cpp">
+			<Option target="SPL_HW1"/>
+		</Unit>
+		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/PrintTrainerStatus.cpp">
 			<Option target="SPL_HW1"/>
 		</Unit>
 		<Unit filename="/home/spl211/CLionProjects/SPL_HW1/src/Studio.cpp">

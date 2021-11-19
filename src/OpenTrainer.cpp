@@ -42,12 +42,15 @@ void OpenTrainer::copy(const OpenTrainer& other) {
 
 void OpenTrainer::act(Studio &studio){
     Trainer* trainer = studio.getTrainer(trainerId);
-    if(trainer == nullptr || trainer->isOpen())
+    if(trainer == nullptr || trainer->isOpen()) {
         this->error("Workout session does not exist or is already open");
+        for(int i=0; i<customers.size(); i++)
+            delete customers[i];
+        customers.clear();
+    }
     else{
         for(int i=0; i<customers.size(); i++) {
             trainer->addCustomer(customers[i]);
-            //trainer->order(customers[i]->getId(),customers[i]->order(studio.getWorkoutOptions()),studio.getWorkoutOptions());
         }
         trainer->openTrainer();
         this->complete();

@@ -57,12 +57,30 @@ void Trainer::addCustomer(Customer* customer) {
     customersList.push_back(customer);
 }
 void Trainer::removeCustomer(int id) {
-    Customer* c = customersList[id];
-    customersList.erase(customersList.begin()+ id);
+    Customer* c = getCustomer(id);
+    eraseOrderList(id);
+    for(int i=0; i<customersList.size(); i++)
+        if(customersList[i]->getId() == id)
+            customersList.erase(customersList.begin() + i);
     delete c;
 }
+void Trainer::eraseOrderList(int id){
+    std::vector<OrderPair> orderList_copy;
+    for(int i=0; i<orderList.size(); i++){
+        if(orderList[i].first != id)
+            orderList_copy.push_back(orderList[i]);
+        else salary-= orderList[i].second.getPrice();
+    }
+    orderList.clear();
+    for(int i=0; i<orderList_copy.size(); i++){
+        orderList.push_back(orderList_copy[i]);
+    }
+}
 Customer* Trainer::getCustomer(int id) {
-    return customersList[id];
+    for(int i=0; i<customersList.size(); i++)
+        if(customersList[i]->getId() == id)
+            return customersList[i];
+    return nullptr;
 }
 std::vector<Customer*>& Trainer::getCustomers() {
     return customersList;
@@ -75,9 +93,13 @@ int Trainer::getSalary() {
     return salary;
 }
 
+std::vector<OrderPair>& Trainer::getOrders(){return orderList;}
+
 void Trainer::order(const int customer_id, const std::vector<int> workout_ids, const std::vector<Workout>& workout_options){
-    for(int i=0; i<workout_ids.size(); i++)
+    for(int i=0; i<workout_ids.size(); i++) {
         orderList.push_back(OrderPair(customer_id, workout_options[workout_ids[i]]));
+        salary+= workout_options[workout_ids[i]].getPrice();
+    }
 }
 
 bool Trainer::isCustomerExist(int id){
@@ -90,7 +112,10 @@ bool Trainer::isCustomerExist(int id){
 
 bool Trainer::isOpen(){return open;}
 void Trainer::openTrainer() {open = true;}
-void Trainer::closeTrainer() {open = false;} // close trainer
+void Trainer::closeTrainer() {
+    open = false;
+    clear();
+} // close trainer
 
 Trainer* Trainer::clone() {
     return new Trainer(*this);

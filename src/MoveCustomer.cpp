@@ -14,23 +14,20 @@ void MoveCustomer::act(Studio &studio){
     Trainer* destinationTrainer = studio.getTrainer(dstTrainer);
     if (sourceTrainer == nullptr || destinationTrainer == nullptr)
         this->error("Cannot move customer");
-    else if( !sourceTrainer->isOpen() || !sourceTrainer->isOpen() || isCustomerExists(studio)|| destinationTrainer->getCapacity() == destinationTrainer->getCustomers().size())
-
+    else if( !sourceTrainer->isOpen() || !sourceTrainer->isOpen() || !isCustomerExists(studio)
+    || destinationTrainer->getCapacity() == destinationTrainer->getCustomers().size())
         this->error("Cannot move customer");
     else{
-        Customer* cus = sourceTrainer->getCustomer(id);
-        std::vector<int> calc = cus->order(studio.getWorkoutOptions());
-        std::vector<Workout> allWo = studio.getWorkoutOptions();
-        int cusPrice = 0;
-        for(int i=0;i<calc.size();i++){
-            cusPrice = cusPrice + allWo[calc[i]].getPrice();
-        }
-
+        //create new customer
+        Customer* customer = sourceTrainer->getCustomer(id);
+        std::vector<Workout> allWorkoutOptions = studio.getWorkoutOptions();
+        Customer* newCustomer = customer->clone();
+        std::vector<int> customerWorkoutId = newCustomer->order(studio.getWorkoutOptions());
+        //remove old customer from src
         sourceTrainer->removeCustomer(id);
-        sourceTrainer->setSalary(sourceTrainer->getSalary() - cusPrice);
-        destinationTrainer->addCustomer(cus);
-        destinationTrainer->setSalary(destinationTrainer->getSalary() + cusPrice);
-
+        //add new customer to des
+        destinationTrainer->addCustomer(newCustomer);
+        destinationTrainer->order(id,customerWorkoutId,allWorkoutOptions);
         if(sourceTrainer->getCustomers().size()==0) {
             sourceTrainer->closeTrainer();
         }
@@ -40,7 +37,7 @@ void MoveCustomer::act(Studio &studio){
 }
 
 bool MoveCustomer::isCustomerExists(Studio &std){
-  std::vector<Customer*>&  customersList = std.getTrainer(id)->getCustomers();
+  std::vector<Customer*>&  customersList = std.getTrainer(srcTrainer)->getCustomers();
     for(int i=0; i<customersList.size(); i++){
         if(customersList[i]->getId() == id)
             return true;

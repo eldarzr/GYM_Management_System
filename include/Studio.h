@@ -30,9 +30,28 @@ private:
     std::vector<Trainer*> trainers;
     std::vector<Workout> workout_options;
     std::vector<BaseAction*> actionsLog;
+    int id_customer;
+    int id_counter;
+
     void init(std::string address);
 
     void clear();
+
+    std::ifstream readFile(std::string address);
+    void initTrainers(std::string line);
+    void initWorkouts(std::string line);
+
+    void openAct(std::string input);
+
+    void orderAct(std::string input);
+
+    void statusAct(std::string input);
+
+    void moveAct(std::string input);
+
+    Customer *parseCastumer(std::string sub, std::string name);
+
+    WorkoutType parseType(std::string type_str);
 };
 
 #endif

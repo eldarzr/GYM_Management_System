@@ -224,16 +224,29 @@ CMakeFiles/SPL_HW1.dir/src/FullBodyCustomer.cpp.s: cmake_force
 
 CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.o: CMakeFiles/SPL_HW1.dir/flags.make
 CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.o: ../src/MoveCustomer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/SPL_HW1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.o -c /home/spl211/SPL_HW1/src/MoveCustomer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.o -c /home/spl211/CLionProjects/SPL_HW1/src/MoveCustomer.cpp
 
 CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/SPL_HW1/src/MoveCustomer.cpp > CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/CLionProjects/SPL_HW1/src/MoveCustomer.cpp > CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.i
 
 CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/SPL_HW1/src/MoveCustomer.cpp -o CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/CLionProjects/SPL_HW1/src/MoveCustomer.cpp -o CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.s
+
+CMakeFiles/SPL_HW1.dir/src/PrintTrainerStatus.cpp.o: CMakeFiles/SPL_HW1.dir/flags.make
+CMakeFiles/SPL_HW1.dir/src/PrintTrainerStatus.cpp.o: ../src/PrintTrainerStatus.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/SPL_HW1.dir/src/PrintTrainerStatus.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SPL_HW1.dir/src/PrintTrainerStatus.cpp.o -c /home/spl211/CLionProjects/SPL_HW1/src/PrintTrainerStatus.cpp
+
+CMakeFiles/SPL_HW1.dir/src/PrintTrainerStatus.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SPL_HW1.dir/src/PrintTrainerStatus.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/CLionProjects/SPL_HW1/src/PrintTrainerStatus.cpp > CMakeFiles/SPL_HW1.dir/src/PrintTrainerStatus.cpp.i
+
+CMakeFiles/SPL_HW1.dir/src/PrintTrainerStatus.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SPL_HW1.dir/src/PrintTrainerStatus.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/CLionProjects/SPL_HW1/src/PrintTrainerStatus.cpp -o CMakeFiles/SPL_HW1.dir/src/PrintTrainerStatus.cpp.s
 
 # Object files for target SPL_HW1
 SPL_HW1_OBJECTS = \
@@ -249,7 +262,8 @@ SPL_HW1_OBJECTS = \
 "CMakeFiles/SPL_HW1.dir/src/Order.cpp.o" \
 "CMakeFiles/SPL_HW1.dir/src/HeavyMuscleCustomer.cpp.o" \
 "CMakeFiles/SPL_HW1.dir/src/FullBodyCustomer.cpp.o" \
-"CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.o"
+"CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.o" \
+"CMakeFiles/SPL_HW1.dir/src/PrintTrainerStatus.cpp.o"
 
 # External object files for target SPL_HW1
 SPL_HW1_EXTERNAL_OBJECTS =
@@ -267,13 +281,10 @@ SPL_HW1: CMakeFiles/SPL_HW1.dir/src/Order.cpp.o
 SPL_HW1: CMakeFiles/SPL_HW1.dir/src/HeavyMuscleCustomer.cpp.o
 SPL_HW1: CMakeFiles/SPL_HW1.dir/src/FullBodyCustomer.cpp.o
 SPL_HW1: CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.o
+SPL_HW1: CMakeFiles/SPL_HW1.dir/src/PrintTrainerStatus.cpp.o
 SPL_HW1: CMakeFiles/SPL_HW1.dir/build.make
 SPL_HW1: CMakeFiles/SPL_HW1.dir/link.txt
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/spl211/SPL_HW1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable SPL_HW1"
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable SPL_HW1"
->>>>>>> f625e03ad0a3b4dffd185646cd62708057e4a8d6
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable SPL_HW1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SPL_HW1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

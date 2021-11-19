@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/SPL_HW1.dir/src/MoveCustomer.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/OpenTrainer.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/Order.cpp.o"
+  "CMakeFiles/SPL_HW1.dir/src/PrintTrainerStatus.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/Studio.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/SweatyCustomer.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/Trainer.cpp.o"
