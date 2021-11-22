@@ -85,6 +85,7 @@ class Close : public BaseAction {
 public:
     Close(int id);
     void act(Studio &studio);
+    virtual BaseAction* clone();
     std::string toString() const;
 private:
     const int trainerId;
@@ -95,8 +96,10 @@ class CloseAll : public BaseAction {
 public:
     CloseAll();
     void act(Studio &studio);
+    virtual BaseAction* clone();
     std::string toString() const;
 private:
+    bool isAct;
 };
 
 

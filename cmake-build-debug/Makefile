@@ -177,6 +177,54 @@ src/CheapCustomer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/CheapCustomer.cpp.s
 .PHONY : src/CheapCustomer.cpp.s
 
+src/Close.o: src/Close.cpp.o
+.PHONY : src/Close.o
+
+# target to build an object file
+src/Close.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Close.cpp.o
+.PHONY : src/Close.cpp.o
+
+src/Close.i: src/Close.cpp.i
+.PHONY : src/Close.i
+
+# target to preprocess a source file
+src/Close.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Close.cpp.i
+.PHONY : src/Close.cpp.i
+
+src/Close.s: src/Close.cpp.s
+.PHONY : src/Close.s
+
+# target to generate assembly for a file
+src/Close.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Close.cpp.s
+.PHONY : src/Close.cpp.s
+
+src/CloseAll.o: src/CloseAll.cpp.o
+.PHONY : src/CloseAll.o
+
+# target to build an object file
+src/CloseAll.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/CloseAll.cpp.o
+.PHONY : src/CloseAll.cpp.o
+
+src/CloseAll.i: src/CloseAll.cpp.i
+.PHONY : src/CloseAll.i
+
+# target to preprocess a source file
+src/CloseAll.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/CloseAll.cpp.i
+.PHONY : src/CloseAll.cpp.i
+
+src/CloseAll.s: src/CloseAll.cpp.s
+.PHONY : src/CloseAll.s
+
+# target to generate assembly for a file
+src/CloseAll.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/CloseAll.cpp.s
+.PHONY : src/CloseAll.cpp.s
+
 src/Customer.o: src/Customer.cpp.o
 .PHONY : src/Customer.o
 
@@ -528,6 +576,12 @@ help:
 	@echo "... src/CheapCustomer.o"
 	@echo "... src/CheapCustomer.i"
 	@echo "... src/CheapCustomer.s"
+	@echo "... src/Close.o"
+	@echo "... src/Close.i"
+	@echo "... src/Close.s"
+	@echo "... src/CloseAll.o"
+	@echo "... src/CloseAll.i"
+	@echo "... src/CloseAll.s"
 	@echo "... src/Customer.o"
 	@echo "... src/Customer.i"
 	@echo "... src/Customer.s"

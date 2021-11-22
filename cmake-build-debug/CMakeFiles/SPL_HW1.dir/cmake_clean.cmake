@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/SPL_HW1.dir/src/BaseAction.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/CheapCustomer.cpp.o"
+  "CMakeFiles/SPL_HW1.dir/src/Close.cpp.o"
+  "CMakeFiles/SPL_HW1.dir/src/CloseAll.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/Customer.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/FullBodyCustomer.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/HeavyMuscleCustomer.cpp.o"

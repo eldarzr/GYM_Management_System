@@ -14,7 +14,7 @@ void MoveCustomer::act(Studio &studio){
     Trainer* destinationTrainer = studio.getTrainer(dstTrainer);
     if (sourceTrainer == nullptr || destinationTrainer == nullptr)
         this->error("Cannot move customer");
-    else if( !sourceTrainer->isOpen() || !sourceTrainer->isOpen() || !isCustomerExists(studio)
+    else if( !sourceTrainer->isOpen() || !destinationTrainer->isOpen() || !isCustomerExists(studio)
     || destinationTrainer->getCapacity() == destinationTrainer->getCustomers().size())
         this->error("Cannot move customer");
     else{
@@ -45,4 +45,12 @@ bool MoveCustomer::isCustomerExists(Studio &std){
     return false;
 }
 
-std::string MoveCustomer::toString() const{ return "MoveCustomer toString not implemented yet";}
+std::string MoveCustomer::toString() const{
+    std::string s = "Move " + std::to_string(srcTrainer)+ " "+ std::to_string(dstTrainer)+ " "+ std::to_string(id)+ " ";
+    if(getStatus() == ERROR) {
+        s = s + "Error:" + getErrorMsg();
+    }
+    else s=s+"Completed";
+
+    return s;
+   ;}

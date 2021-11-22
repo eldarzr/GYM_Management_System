@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/src/BaseAction.cpp" "/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/BaseAction.cpp.o"
   "/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/src/CheapCustomer.cpp" "/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/CheapCustomer.cpp.o"
+  "/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/src/Close.cpp" "/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/Close.cpp.o"
+  "/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/src/CloseAll.cpp" "/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/CloseAll.cpp.o"
   "/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/src/Customer.cpp" "/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/Customer.cpp.o"
   "/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/src/FullBodyCustomer.cpp" "/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/FullBodyCustomer.cpp.o"
   "/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/src/HeavyMuscleCustomer.cpp" "/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/cmake-build-debug/CMakeFiles/SPL_HW1.dir/src/HeavyMuscleCustomer.cpp.o"
