@@ -6,27 +6,59 @@
 
 #IncludeRegexTransform: 
 
-/home/spl211/CLionProjects/SPL_HW1/include/Customer.h
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Action.h
+string
+-
+iostream
+-
+Customer.h
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Customer.h
+
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Customer.h
 vector
 -
 string
 -
 Workout.h
-/home/spl211/CLionProjects/SPL_HW1/include/Workout.h
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Workout.h
 
-/home/spl211/CLionProjects/SPL_HW1/include/Trainer.h
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Studio.h
+vector
+-
+string
+-
+Workout.h
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Workout.h
+Trainer.h
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Trainer.h
+Action.h
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Action.h
+
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Trainer.h
 vector
 -
 Customer.h
-/home/spl211/CLionProjects/SPL_HW1/include/Customer.h
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Customer.h
 Workout.h
-/home/spl211/CLionProjects/SPL_HW1/include/Workout.h
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Workout.h
 
-/home/spl211/CLionProjects/SPL_HW1/include/Workout.h
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Workout.h
 string
 -
 
-/home/spl211/CLionProjects/SPL_HW1/src/Trainer.cpp
-../include/Trainer.h
-/home/spl211/CLionProjects/SPL_HW1/include/Trainer.h
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/src/Studio.cpp
+../include/Studio.h
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Studio.h
+iostream
+-
+fstream
+-
+sstream
+-
+string
+-
+cctype
+-
+algorithm
+-
 

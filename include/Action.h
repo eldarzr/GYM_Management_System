@@ -50,6 +50,7 @@ private:
     void clear();
     const int trainerId;
     std::vector<Customer *> customers;
+    std::string customerNameError;
 };
 
 
@@ -103,6 +104,7 @@ class PrintWorkoutOptions : public BaseAction {
 public:
     PrintWorkoutOptions();
     void act(Studio &studio);
+    virtual BaseAction* clone();
     std::string toString() const;
 private:
 };
@@ -123,6 +125,7 @@ class PrintActionsLog : public BaseAction {
 public:
     PrintActionsLog();
     void act(Studio &studio);
+    virtual BaseAction* clone();
     std::string toString() const;
 private:
 };

@@ -57,10 +57,10 @@ RM = /home/spl211/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/spl211/CLionProjects/SPL_HW1
+CMAKE_SOURCE_DIR = /home/spl211/CLionProjects/SPL_HW12/SPL_HW1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/spl211/CLionProjects/SPL_HW1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/spl211/CLionProjects/SPL_HW12/SPL_HW1/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles /home/spl211/CLionProjects/SPL_HW1/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/CLionProjects/SPL_HW12/SPL_HW1/cmake-build-debug/CMakeFiles /home/spl211/CLionProjects/SPL_HW12/SPL_HW1/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/CLionProjects/SPL_HW12/SPL_HW1/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -321,6 +321,30 @@ src/Order.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/Order.cpp.s
 .PHONY : src/Order.cpp.s
 
+src/PrintActionsLog.o: src/PrintActionsLog.cpp.o
+.PHONY : src/PrintActionsLog.o
+
+# target to build an object file
+src/PrintActionsLog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/PrintActionsLog.cpp.o
+.PHONY : src/PrintActionsLog.cpp.o
+
+src/PrintActionsLog.i: src/PrintActionsLog.cpp.i
+.PHONY : src/PrintActionsLog.i
+
+# target to preprocess a source file
+src/PrintActionsLog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/PrintActionsLog.cpp.i
+.PHONY : src/PrintActionsLog.cpp.i
+
+src/PrintActionsLog.s: src/PrintActionsLog.cpp.s
+.PHONY : src/PrintActionsLog.s
+
+# target to generate assembly for a file
+src/PrintActionsLog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/PrintActionsLog.cpp.s
+.PHONY : src/PrintActionsLog.cpp.s
+
 src/PrintTrainerStatus.o: src/PrintTrainerStatus.cpp.o
 .PHONY : src/PrintTrainerStatus.o
 
@@ -344,6 +368,30 @@ src/PrintTrainerStatus.s: src/PrintTrainerStatus.cpp.s
 src/PrintTrainerStatus.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/PrintTrainerStatus.cpp.s
 .PHONY : src/PrintTrainerStatus.cpp.s
+
+src/PrintWorkoutOptions.o: src/PrintWorkoutOptions.cpp.o
+.PHONY : src/PrintWorkoutOptions.o
+
+# target to build an object file
+src/PrintWorkoutOptions.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/PrintWorkoutOptions.cpp.o
+.PHONY : src/PrintWorkoutOptions.cpp.o
+
+src/PrintWorkoutOptions.i: src/PrintWorkoutOptions.cpp.i
+.PHONY : src/PrintWorkoutOptions.i
+
+# target to preprocess a source file
+src/PrintWorkoutOptions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/PrintWorkoutOptions.cpp.i
+.PHONY : src/PrintWorkoutOptions.cpp.i
+
+src/PrintWorkoutOptions.s: src/PrintWorkoutOptions.cpp.s
+.PHONY : src/PrintWorkoutOptions.s
+
+# target to generate assembly for a file
+src/PrintWorkoutOptions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/PrintWorkoutOptions.cpp.s
+.PHONY : src/PrintWorkoutOptions.cpp.s
 
 src/Studio.o: src/Studio.cpp.o
 .PHONY : src/Studio.o
@@ -498,9 +546,15 @@ help:
 	@echo "... src/Order.o"
 	@echo "... src/Order.i"
 	@echo "... src/Order.s"
+	@echo "... src/PrintActionsLog.o"
+	@echo "... src/PrintActionsLog.i"
+	@echo "... src/PrintActionsLog.s"
 	@echo "... src/PrintTrainerStatus.o"
 	@echo "... src/PrintTrainerStatus.i"
 	@echo "... src/PrintTrainerStatus.s"
+	@echo "... src/PrintWorkoutOptions.o"
+	@echo "... src/PrintWorkoutOptions.i"
+	@echo "... src/PrintWorkoutOptions.s"
 	@echo "... src/Studio.o"
 	@echo "... src/Studio.i"
 	@echo "... src/Studio.s"

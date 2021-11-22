@@ -9,12 +9,15 @@
 #include <string>
 #include <cctype>
 #include <algorithm>
+extern Studio* backup;
 
 void Studio::start(){
     bool flg = true;
+    backup = new Studio();
     while (flg) {
         std::string input;
         std::getline( std::cin, input);
+        //BaseAction* action;
         if (input.find("open") != std::string::npos) {
             openAct(input);
         }
@@ -27,9 +30,19 @@ void Studio::start(){
         if (input.find("move") != std::string::npos) {
             moveAct(input);
         }
+        if (input.find("workout_options") != std::string::npos) {
+            workoutOptionsAct();
+        }
+        if (input.find("log") != std::string::npos) {
+            logAct();
+        }
         if (input.find("close") != std::string::npos) {
             flg = false;
         }
+/*        action->act(*this);
+        actionsLog.push_back(action);
+        if(action->getStatus() == ERROR)
+            std::cout << action.*/
     }
 
 }
@@ -200,9 +213,10 @@ void Studio::openAct(std::string input){
         customers.push_back(parseCastumer(sub,name));
         id_customer++;
     }
-    BaseAction *action = new OpenTrainer(trainer_num, customers);
+    BaseAction* action = new OpenTrainer(trainer_num,customers);
     action->act(*this);
     actionsLog.push_back(action);
+    //return new OpenTrainer(trainer_num, customers);
 }
 void Studio::orderAct(std::string input){
 
@@ -216,6 +230,16 @@ void Studio::statusAct(std::string input){
     input = input.substr(7);
     int trainer_num = std::stoi(input);
     BaseAction* action = new PrintTrainerStatus(trainer_num);
+    action->act(*this);
+    actionsLog.push_back(action);
+}
+void Studio::workoutOptionsAct() {
+    BaseAction* action = new PrintWorkoutOptions();
+    action->act(*this);
+    actionsLog.push_back(action);
+}
+void Studio::logAct() {
+    BaseAction* action = new PrintActionsLog();
     action->act(*this);
     actionsLog.push_back(action);
 }

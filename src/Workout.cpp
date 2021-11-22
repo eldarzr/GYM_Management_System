@@ -12,8 +12,15 @@ int Workout::getId() const {return id;}
 std::string Workout::getName() const{return name;}
 int Workout::getPrice() const{return price;}
 WorkoutType Workout::getType() const{return type;}
+std::string Workout::toString() const{
+    std::string ret = name + ", ";
+    if(type == ANAEROBIC)
+        ret = ret + "ANAEROBIC, ";
+    else if(type == MIXED)
+        ret = ret + "MIXED, ";
+    else if(type == CARDIO)
+        ret = ret + "CARDIO, ";
+    ret = ret + std::to_string(price);
 
-
-
-//
-
+    return ret;
+}

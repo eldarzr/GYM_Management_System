@@ -6,7 +6,7 @@
 
 using namespace std;
 
-//Studio* backup = nullptr;
+extern Studio* backup = nullptr;
 
 Workout* w;
 std::vector<Workout> workouts;
