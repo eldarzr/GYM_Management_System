@@ -18,7 +18,7 @@ void CloseAll::act(Studio &studio){
             trainerToClose->closeTrainer();
             complete();
             isAct=true;
-            std::cout << "Trainer " << trainerId << " closed." << trainerSalary << "NIS";
+            std::cout << "Trainer " << trainerId << " closed. Salary " <<trainerSalary <<"NIS"<<"\n";
         }
     }
 

@@ -42,18 +42,18 @@ private:
     void initWorkouts(std::string line);
 
     void openAct(std::string input);
-
     void orderAct(std::string input);
-
     void statusAct(std::string input);
-
     void moveAct(std::string input);
     void workoutOptionsAct();
     void logAct();
+    void closeAct(std::string input);
+    void closeAllAct();
 
     Customer *parseCastumer(std::string sub, std::string name);
 
     WorkoutType parseType(std::string type_str);
+
 };
 
 #endif

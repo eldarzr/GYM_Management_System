@@ -35,6 +35,13 @@ void Studio::start(){
             logAct();
         }
         if (input.find("close") != std::string::npos) {
+            if (input.find("closeall") != std::string::npos){
+                closeAllAct();
+            }
+            else
+                closeAct(input);
+        }
+        if (input.find("finish") != std::string::npos) {
             flg = false;
         }
 /*        action->act(*this);
@@ -225,11 +232,11 @@ void Studio::orderAct(std::string input){
     actionsLog.push_back(action);
 }
 void Studio::statusAct(std::string input){
-    input = input.substr(7);
-    int trainer_num = std::stoi(input);
-    BaseAction* action = new PrintTrainerStatus(trainer_num);
-    action->act(*this);
-    actionsLog.push_back(action);
+        input = input.substr(7);
+        int trainer_num = std::stoi(input);
+        BaseAction *action = new PrintTrainerStatus(trainer_num);
+        action->act(*this);
+        actionsLog.push_back(action);
 }
 void Studio::workoutOptionsAct() {
     BaseAction* action = new PrintWorkoutOptions();
@@ -257,6 +264,20 @@ void Studio::moveAct(std::string input){
     action->act(*this);
     actionsLog.push_back(action);
 }
+
+void Studio::closeAct(std::string input) {
+    input = input.substr(6);
+    int trainer_num = std::stoi(input);
+    BaseAction* action = new Close(trainer_num);
+    action->act(*this);
+    actionsLog.push_back(action);
+}
+
+void Studio::closeAllAct() {
+    BaseAction* action = new CloseAll();
+    action->act(*this);
+    actionsLog.push_back(action);
+}
 Customer* Studio::parseCastumer(std::string sub, std::string name){
     if (sub.find("swt") != std::string::npos)
         return new SweatyCustomer(name, id_customer);
@@ -277,3 +298,7 @@ WorkoutType Studio::parseType(std::string type_str){
         return CARDIO;
     return ANAEROBIC;
 }
+
+
+
+
