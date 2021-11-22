@@ -10,6 +10,20 @@ CMakeFiles/SPL_HW1.dir/src/CheapCustomer.cpp.o: \
  ../include/Customer.h \
  ../include/Workout.h \
  ../src/CheapCustomer.cpp
+CMakeFiles/SPL_HW1.dir/src/Close.cpp.o: \
+ ../include/Action.h \
+ ../include/Customer.h \
+ ../include/Studio.h \
+ ../include/Trainer.h \
+ ../include/Workout.h \
+ ../src/Close.cpp
+CMakeFiles/SPL_HW1.dir/src/CloseAll.cpp.o: \
+ ../include/Action.h \
+ ../include/Customer.h \
+ ../include/Studio.h \
+ ../include/Trainer.h \
+ ../include/Workout.h \
+ ../src/CloseAll.cpp
 CMakeFiles/SPL_HW1.dir/src/Customer.cpp.o: \
  ../include/Customer.h \
  ../include/Workout.h \
