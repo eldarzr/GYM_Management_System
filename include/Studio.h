@@ -48,6 +48,8 @@ private:
     void statusAct(std::string input);
 
     void moveAct(std::string input);
+    void workoutOptionsAct();
+    void logAct();
 
     Customer *parseCastumer(std::string sub, std::string name);
 

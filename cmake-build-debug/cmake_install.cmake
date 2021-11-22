@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: /home/spl211/SPL_HW1
+=======
+# Install script for directory: /home/spl211/CLionProjects/SPL_HW12/SPL_HW1
+>>>>>>> 2d44d6f161126c8478a0909f0aee721c2b44357f
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +54,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< HEAD
 file(WRITE "/home/spl211/SPL_HW1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> 2d44d6f161126c8478a0909f0aee721c2b44357f
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

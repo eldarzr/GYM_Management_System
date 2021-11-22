@@ -44,8 +44,11 @@ void OpenTrainer::act(Studio &studio){
     Trainer* trainer = studio.getTrainer(trainerId);
     if(trainer == nullptr || trainer->isOpen()) {
         this->error("Workout session does not exist or is already open");
-        for(int i=0; i<customers.size(); i++)
+        std::cout << getErrorMsg() << std::endl;
+        for(int i=0; i<customers.size(); i++) {
+            customerNameError +=  " " + customers[i]->toString();
             delete customers[i];
+        }
         customers.clear();
     }
     else{
@@ -57,5 +60,12 @@ void OpenTrainer::act(Studio &studio){
     }
 }
 std::string OpenTrainer::toString() const{
-    return "open trainer action does not have yes tostring";
+    //return "open trainer action does not have yes tostring";
+    std::string ret("open " + std::to_string(trainerId));
+    for(Customer* customer : customers)
+        ret = ret + " " + customer->toString();
+    if(getStatus() == ERROR){
+        ret = ret + customerNameError + " " + getErrorMsg();
+    }
+    return ret;
 }

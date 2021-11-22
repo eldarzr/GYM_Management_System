@@ -29,5 +29,5 @@ void PrintTrainerStatus::act(Studio &studio) {
 }
 
 std::string PrintTrainerStatus::toString() const{
-    return "open trainer action does not have yes tostring";
+    return "PrintWorkoutOptions does not have yes tostring";
 }

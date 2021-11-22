@@ -57,6 +57,13 @@ CMakeFiles/SPL_HW1.dir/src/Order.cpp.o: \
  ../include/Trainer.h \
  ../include/Workout.h \
  ../src/Order.cpp
+CMakeFiles/SPL_HW1.dir/src/PrintActionsLog.cpp.o: \
+ ../include/Action.h \
+ ../include/Customer.h \
+ ../include/Studio.h \
+ ../include/Trainer.h \
+ ../include/Workout.h \
+ ../src/PrintActionsLog.cpp
 CMakeFiles/SPL_HW1.dir/src/PrintTrainerStatus.cpp.o: \
  ../include/Action.h \
  ../include/Customer.h \
@@ -64,6 +71,13 @@ CMakeFiles/SPL_HW1.dir/src/PrintTrainerStatus.cpp.o: \
  ../include/Trainer.h \
  ../include/Workout.h \
  ../src/PrintTrainerStatus.cpp
+CMakeFiles/SPL_HW1.dir/src/PrintWorkoutOptions.cpp.o: \
+ ../include/Action.h \
+ ../include/Customer.h \
+ ../include/Studio.h \
+ ../include/Trainer.h \
+ ../include/Workout.h \
+ ../src/PrintWorkoutOptions.cpp
 CMakeFiles/SPL_HW1.dir/src/Studio.cpp.o: \
  ../include/Action.h \
  ../include/Customer.h \

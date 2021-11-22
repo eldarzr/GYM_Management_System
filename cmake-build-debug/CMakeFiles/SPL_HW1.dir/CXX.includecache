@@ -6,28 +6,45 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /home/spl211/SPL_HW1/include/Action.h
+=======
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Action.h
+>>>>>>> 2d44d6f161126c8478a0909f0aee721c2b44357f
 string
 -
 iostream
 -
 Customer.h
+<<<<<<< HEAD
 /home/spl211/SPL_HW1/include/Customer.h
 
 /home/spl211/SPL_HW1/include/Customer.h
+=======
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Customer.h
+
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Customer.h
+>>>>>>> 2d44d6f161126c8478a0909f0aee721c2b44357f
 vector
 -
 string
 -
 Workout.h
+<<<<<<< HEAD
 /home/spl211/SPL_HW1/include/Workout.h
 
 /home/spl211/SPL_HW1/include/Studio.h
+=======
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Workout.h
+
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Studio.h
+>>>>>>> 2d44d6f161126c8478a0909f0aee721c2b44357f
 vector
 -
 string
 -
 Workout.h
+<<<<<<< HEAD
 /home/spl211/SPL_HW1/include/Workout.h
 Trainer.h
 /home/spl211/SPL_HW1/include/Trainer.h
@@ -89,6 +106,29 @@ string
 /home/spl211/SPL_HW1/src/Studio.cpp
 ../include/Studio.h
 /home/spl211/SPL_HW1/include/Studio.h
+=======
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Workout.h
+Trainer.h
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Trainer.h
+Action.h
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Action.h
+
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Trainer.h
+vector
+-
+Customer.h
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Customer.h
+Workout.h
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Workout.h
+
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Workout.h
+string
+-
+
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/src/Studio.cpp
+../include/Studio.h
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Studio.h
+>>>>>>> 2d44d6f161126c8478a0909f0aee721c2b44357f
 iostream
 -
 fstream
@@ -101,6 +141,7 @@ cctype
 -
 algorithm
 -
+<<<<<<< HEAD
 
 /home/spl211/SPL_HW1/src/main.cpp
 ../include/Studio.h
@@ -113,4 +154,6 @@ algorithm
 /home/spl211/SPL_HW1/include/Trainer.h
 iostream
 -
+=======
+>>>>>>> 2d44d6f161126c8478a0909f0aee721c2b44357f
 
