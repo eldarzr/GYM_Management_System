@@ -6,6 +6,9 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <string>
+#include <cctype>
+#include <algorithm>
 
 void Studio::start(){
     bool flg = true;
@@ -170,7 +173,9 @@ void Studio::initWorkouts(std::string line){
 
     //get the price from input
     std::string price_str = workout_str[2];
-    price_str = price_str.substr(1);
+
+    price_str.erase(std::remove_if(price_str.begin(), price_str.end(), ::isspace), price_str.end());
+    //price_str = price_str.substr(1);
     int price;
     price = std::stoi( price_str );
     workout_options.push_back(Workout(id_counter, name,price,type));
