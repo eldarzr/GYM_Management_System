@@ -46,19 +46,15 @@ Workout.h
 string
 -
 
-/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/src/Studio.cpp
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/src/main.cpp
 ../include/Studio.h
 /home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Studio.h
+../include/Workout.h
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Workout.h
+../include/Customer.h
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Customer.h
+../include/Trainer.h
+/home/spl211/CLionProjects/SPL_HW12/SPL_HW1/include/Trainer.h
 iostream
--
-fstream
--
-sstream
--
-string
--
-cctype
--
-algorithm
 -
 

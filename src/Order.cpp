@@ -28,7 +28,11 @@
         complete();
 
 }
-    std::string Order::toString() const{ return "CPP METUMTAM";}
-
-
-
+    std::string Order::toString() const{
+        std::string ret("order " + std::to_string(trainerId) + " ");
+        if(getStatus() == ERROR){
+            ret = ret + "Error: " + getErrorMsg();
+        }
+        else ret = ret + "completed";
+        return ret;
+}

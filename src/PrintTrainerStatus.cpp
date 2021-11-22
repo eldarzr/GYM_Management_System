@@ -26,8 +26,10 @@ void PrintTrainerStatus::act(Studio &studio) {
     for(int i=0; i< orders.size(); i++)
         std::cout << orders[i].second.getName() << " " << orders[i].second.getPrice() << " " << orders[i].first << " "  << std::endl;
     std::cout << "Current Trainer’s Salary: " << trainer->getSalary() << "NIS" << std::endl;
+    complete();
 }
 
-std::string PrintTrainerStatus::toString() const{
-    return "PrintWorkoutOptions does not have yes tostring";
+std::string PrintTrainerStatus::toString() const {
+    std::string ret = "PrintTrainerStatus " + std::to_string(trainerId) + " ";
+    return ret;
 }

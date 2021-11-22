@@ -53,6 +53,7 @@ void OpenTrainer::act(Studio &studio){
     }
     else{
         for(int i=0; i<customers.size(); i++) {
+            customerNameError +=  " " + customers[i]->toString();
             trainer->addCustomer(customers[i]);
         }
         trainer->openTrainer();
@@ -60,12 +61,11 @@ void OpenTrainer::act(Studio &studio){
     }
 }
 std::string OpenTrainer::toString() const{
-    //return "open trainer action does not have yes tostring";
     std::string ret("open " + std::to_string(trainerId));
-    for(Customer* customer : customers)
-        ret = ret + " " + customer->toString();
+    ret = ret + customerNameError + " ";
     if(getStatus() == ERROR){
-        ret = ret + customerNameError + " " + getErrorMsg();
+        ret = ret + "Error: " + getErrorMsg();
     }
+    else ret = ret + "completed";
     return ret;
 }

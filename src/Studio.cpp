@@ -9,11 +9,9 @@
 #include <string>
 #include <cctype>
 #include <algorithm>
-extern Studio* backup;
 
 void Studio::start(){
     bool flg = true;
-    backup = new Studio();
     while (flg) {
         std::string input;
         std::getline( std::cin, input);
