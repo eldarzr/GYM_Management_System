@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/SPL_HW1.dir/src/BackupStudio.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/BaseAction.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/CheapCustomer.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/Close.cpp.o"
@@ -12,6 +13,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/SPL_HW1.dir/src/PrintActionsLog.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/PrintTrainerStatus.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/PrintWorkoutOptions.cpp.o"
+  "CMakeFiles/SPL_HW1.dir/src/RestoreStudio.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/Studio.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/SweatyCustomer.cpp.o"
   "CMakeFiles/SPL_HW1.dir/src/Trainer.cpp.o"

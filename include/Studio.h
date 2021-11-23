@@ -49,6 +49,8 @@ private:
     void logAct();
     void closeAct(std::string input);
     void closeAllAct();
+    void backupAct();
+    void restoreAct();
 
     Customer *parseCastumer(std::string sub, std::string name);
 

@@ -138,6 +138,7 @@ class BackupStudio : public BaseAction {
 public:
     BackupStudio();
     void act(Studio &studio);
+    virtual BaseAction* clone();
     std::string toString() const;
 private:
 };
@@ -147,6 +148,7 @@ class RestoreStudio : public BaseAction {
 public:
     RestoreStudio();
     void act(Studio &studio);
+    virtual BaseAction* clone();
     std::string toString() const;
 
 };

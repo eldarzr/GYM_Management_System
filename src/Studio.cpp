@@ -10,7 +10,11 @@
 #include <cctype>
 #include <algorithm>
 
+extern Studio* backup;
+
 void Studio::start(){
+
+    backup = new Studio();
     bool flg = true;
     while (flg) {
         std::string input;
@@ -34,6 +38,12 @@ void Studio::start(){
         if (input.find("log") != std::string::npos) {
             logAct();
         }
+        if (input.find("backup") != std::string::npos) {
+            backupAct();
+        }
+        if (input.find("restore") != std::string::npos) {
+            restoreAct();
+        }
         if (input.find("close") != std::string::npos) {
             if (input.find("closeall") != std::string::npos){
                 closeAllAct();
@@ -55,7 +65,7 @@ void Studio::start(){
 Studio::Studio():id_customer(0), id_counter(0){
     init("/home/spl211/ExmapleInput.txt");
 }
-Studio::Studio(const Studio &other){
+Studio::Studio(const Studio &other):id_customer(other.id_customer),id_counter(other.id_counter),open(other.open){
     copy(other);
 }
 void Studio::copy(const Studio &other){
@@ -275,6 +285,19 @@ void Studio::closeAct(std::string input) {
 
 void Studio::closeAllAct() {
     BaseAction* action = new CloseAll();
+    action->act(*this);
+    actionsLog.push_back(action);
+}
+
+void Studio::backupAct() {
+    BaseAction* action = new BackupStudio();
+    action->act(*this);
+    actionsLog.push_back(action);
+    backup = new Studio(*this);
+}
+
+void Studio::restoreAct() {
+    BaseAction* action = new RestoreStudio();
     action->act(*this);
     actionsLog.push_back(action);
 }

@@ -6,7 +6,7 @@
 
 using namespace std;
 
-extern Studio* backup;
+Studio* backup;
 
 Workout* w;
 std::vector<Workout> workouts;
@@ -15,8 +15,13 @@ void testTrainer();
 
 int main(int argc, char** argv){
 
-    Studio s;
-    s.start();
+    backup = nullptr;
+    Studio* s;
+    s->start();
+    delete s;
+    s = backup;
+    s->start();
+
 
 
 /*

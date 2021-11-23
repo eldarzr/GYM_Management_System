@@ -57,10 +57,10 @@ RM = /home/spl211/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/spl211/SPL_HW1/SPL_HW1
+CMAKE_SOURCE_DIR = /home/spl211/CLionProjects/SPL_HW1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/spl211/SPL_HW1/SPL_HW1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/spl211/CLionProjects/SPL_HW1/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/SPL_HW1/SPL_HW1/cmake-build-debug/CMakeFiles /home/spl211/SPL_HW1/SPL_HW1/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles /home/spl211/CLionProjects/SPL_HW1/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/SPL_HW1/SPL_HW1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/CLionProjects/SPL_HW1/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,30 @@ SPL_HW1: cmake_check_build_system
 SPL_HW1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/build
 .PHONY : SPL_HW1/fast
+
+src/BackupStudio.o: src/BackupStudio.cpp.o
+.PHONY : src/BackupStudio.o
+
+# target to build an object file
+src/BackupStudio.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/BackupStudio.cpp.o
+.PHONY : src/BackupStudio.cpp.o
+
+src/BackupStudio.i: src/BackupStudio.cpp.i
+.PHONY : src/BackupStudio.i
+
+# target to preprocess a source file
+src/BackupStudio.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/BackupStudio.cpp.i
+.PHONY : src/BackupStudio.cpp.i
+
+src/BackupStudio.s: src/BackupStudio.cpp.s
+.PHONY : src/BackupStudio.s
+
+# target to generate assembly for a file
+src/BackupStudio.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/BackupStudio.cpp.s
+.PHONY : src/BackupStudio.cpp.s
 
 src/BaseAction.o: src/BaseAction.cpp.o
 .PHONY : src/BaseAction.o
@@ -441,6 +465,30 @@ src/PrintWorkoutOptions.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/PrintWorkoutOptions.cpp.s
 .PHONY : src/PrintWorkoutOptions.cpp.s
 
+src/RestoreStudio.o: src/RestoreStudio.cpp.o
+.PHONY : src/RestoreStudio.o
+
+# target to build an object file
+src/RestoreStudio.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/RestoreStudio.cpp.o
+.PHONY : src/RestoreStudio.cpp.o
+
+src/RestoreStudio.i: src/RestoreStudio.cpp.i
+.PHONY : src/RestoreStudio.i
+
+# target to preprocess a source file
+src/RestoreStudio.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/RestoreStudio.cpp.i
+.PHONY : src/RestoreStudio.cpp.i
+
+src/RestoreStudio.s: src/RestoreStudio.cpp.s
+.PHONY : src/RestoreStudio.s
+
+# target to generate assembly for a file
+src/RestoreStudio.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_HW1.dir/build.make CMakeFiles/SPL_HW1.dir/src/RestoreStudio.cpp.s
+.PHONY : src/RestoreStudio.cpp.s
+
 src/Studio.o: src/Studio.cpp.o
 .PHONY : src/Studio.o
 
@@ -570,6 +618,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SPL_HW1"
+	@echo "... src/BackupStudio.o"
+	@echo "... src/BackupStudio.i"
+	@echo "... src/BackupStudio.s"
 	@echo "... src/BaseAction.o"
 	@echo "... src/BaseAction.i"
 	@echo "... src/BaseAction.s"
@@ -609,6 +660,9 @@ help:
 	@echo "... src/PrintWorkoutOptions.o"
 	@echo "... src/PrintWorkoutOptions.i"
 	@echo "... src/PrintWorkoutOptions.s"
+	@echo "... src/RestoreStudio.o"
+	@echo "... src/RestoreStudio.i"
+	@echo "... src/RestoreStudio.s"
 	@echo "... src/Studio.o"
 	@echo "... src/Studio.i"
 	@echo "... src/Studio.s"
