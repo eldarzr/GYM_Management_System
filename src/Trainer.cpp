@@ -10,17 +10,17 @@ Trainer::Trainer(const Trainer& other):capacity(other.capacity), open(other.open
 }
 
 void Trainer::clear() {
-    for(int i=0; i<customersList.size(); i++){
+    for(int i=0; i<int(customersList.size()); i++){
         delete customersList[i];
     }
     customersList.clear();
     orderList.clear();
 }
 void Trainer::copy(const Trainer& other) {
-    for(int i=0; i<other.customersList.size(); i++){
+    for(int i=0; i<int(other.customersList.size()); i++){
         customersList.push_back(other.customersList[i]->clone());
     }
-    for(int i=0; i<other.orderList.size(); i++){
+    for(int i=0; i<int(other.orderList.size()); i++){
         orderList.push_back(other.orderList[i]);
     }
 }
@@ -29,6 +29,7 @@ Trainer& Trainer::operator=(const Trainer& other){
         clear();
         capacity = other.capacity;
         open = other.open;
+        salary = other.salary;
         copy(other);
     }
     return *this;
@@ -38,14 +39,17 @@ Trainer::~Trainer(){
     clear();
 }
 
-Trainer::Trainer(Trainer&& other):capacity(other.capacity), open(other.open){
-    copy(other);
-    other.clear();
+Trainer::Trainer(Trainer&& other):capacity(other.capacity), open(other.open), salary(other.salary){
+    if(this != &other) {
+        copy(other);
+        other.clear();
+    }
 }
 Trainer& Trainer::operator=(Trainer&& other){
     if(&other != this) {
         clear();
         capacity = other.capacity;
+        salary = other.salary;
         open = other.open;
         copy(other);
     }

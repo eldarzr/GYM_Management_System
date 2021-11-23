@@ -39,9 +39,9 @@ public:
     OpenTrainer(const OpenTrainer& other);
     virtual ~OpenTrainer();
     virtual BaseAction* clone();
-    virtual void operator=(const OpenTrainer& other);
+    virtual OpenTrainer& operator=(const OpenTrainer& other);
     OpenTrainer(OpenTrainer&& other);
-    virtual void operator=(const OpenTrainer&& other);
+    virtual OpenTrainer& operator=(OpenTrainer&& other);
 
     void act(Studio &studio);
     std::string toString() const;

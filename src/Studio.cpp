@@ -12,6 +12,53 @@
 
 extern Studio* backup;
 
+Studio::Studio(const std::string &configFilePath):id_customer(0), id_counter(0), open(true){}
+
+Studio::Studio():id_customer(0), id_counter(0), open(true){
+    init("/home/spl211/ExmapleInput.txt");
+}
+Studio::Studio(const Studio &other):id_customer(other.id_customer),id_counter(other.id_counter),open(other.open){
+    copy(other);
+}
+void Studio::copy(const Studio &other){
+    open = other.open;
+    id_customer = other.id_customer;
+    id_counter = other.id_counter;
+
+    for(int i=0; i<other.workout_options.size(); i++){
+        workout_options.push_back(other.workout_options[i]);
+    }
+    for(int i=0; i<other.trainers.size(); i++){
+        trainers.push_back(other.trainers[i]->clone());
+    }
+    for(int i=0; i<other.actionsLog.size(); i++){
+        actionsLog.push_back(other.actionsLog[i]->clone());
+    }
+}
+ Studio::~Studio(){
+    clear();
+}
+Studio& Studio::operator =(const Studio &other){
+    if(&other != this){
+        clear();
+        copy(other);
+    }
+    return *this;
+}
+Studio::Studio(Studio &&otherStudio){
+    copy(otherStudio);
+    otherStudio.clear();
+}
+Studio& Studio::operator = (Studio && other){
+    if(this != &other) {
+        clear();
+        copy(other);
+        other.clear();
+    }
+    return *this;
+}
+
+
 void Studio::start(){
 
     std::cout << "Studio is now open!" << std::endl;
@@ -63,50 +110,6 @@ void Studio::start(){
 
 }
 
-Studio::Studio():id_customer(0), id_counter(0){
-    init("/home/spl211/ExmapleInput.txt");
-}
-Studio::Studio(const Studio &other):id_customer(other.id_customer),id_counter(other.id_counter),open(other.open){
-    copy(other);
-}
-void Studio::copy(const Studio &other){
-    open = other.open;
-
-    for(int i=0; i<other.workout_options.size(); i++){
-        workout_options.push_back(other.workout_options[i]);
-    }
-    for(int i=0; i<other.trainers.size(); i++){
-        trainers.push_back(other.trainers[i]->clone());
-    }
-    for(int i=0; i<other.actionsLog.size(); i++){
-        actionsLog.push_back(other.actionsLog[i]->clone());
-    }
-}
- Studio::~Studio(){
-    clear();
-}
-Studio& Studio::operator =(const Studio &other){
-    if(&other != this){
-        clear();
-        copy(other);
-    }
-    return *this;
-}
-Studio::Studio(Studio &&otherStudio){
-    copy(otherStudio);
-    otherStudio.clear();
-    otherStudio.open=false;
-}
-Studio& Studio::operator = (Studio && other){
-    if(this != &other) {
-        clear();
-        copy(other);
-        other.clear();
-    }
-    return *this;
-}
-Studio::Studio(const std::string &configFilePath):id_customer(0){}
-
 int Studio::getNumOfTrainers() const{ return trainers.size();}
 Trainer* Studio::getTrainer(int tid){
     if(tid >= trainers.size() )
@@ -115,16 +118,17 @@ Trainer* Studio::getTrainer(int tid){
 const std::vector<BaseAction*>& Studio::getActionsLog() const{return actionsLog;} // Return a reference to the history of actions
 std::vector<Workout>& Studio::getWorkoutOptions(){return workout_options;}
 void Studio::clear() {
-    for(int i=0;i<actionsLog.size();i++) {
+    for(int i=0;i<int(actionsLog.size());i++) {
         delete actionsLog[i];
     }
 
-    for(int i=0;i<trainers.size();i++) {
+    for(int i=0;i<int(trainers.size());i++) {
         delete trainers[i];
     }
     trainers.clear();
     actionsLog.clear();
     workout_options.clear();
+    open = false;
 }
 void Studio::init(std::string address) {
 

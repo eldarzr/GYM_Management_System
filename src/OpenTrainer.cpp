@@ -26,16 +26,23 @@ BaseAction* OpenTrainer::clone() {
     return new OpenTrainer(*this);
 }
 
-void OpenTrainer::operator=(const OpenTrainer& other){
-    clear();
-    copy(other);
-    BaseAction::operator=(other);
+OpenTrainer& OpenTrainer::operator=(const OpenTrainer& other){
+    if(this != &other) {
+        clear();
+        copy(other);
+        BaseAction::operator=(other);
+    }
+    return *this;
 }
-void OpenTrainer::operator=(const OpenTrainer&& other){
-    clear();
-    copy(other);
-    BaseAction::operator=(other);
-    clear();
+OpenTrainer& OpenTrainer::operator=(OpenTrainer&& other){
+    if(this != &other) {
+        clear();
+        copy(other);
+        BaseAction::operator=(other);
+        other.clear();
+    }
+
+    return *this;
 }
 
 void OpenTrainer::copy(const OpenTrainer& other) {
