@@ -16,12 +16,16 @@ void testTrainer();
 int main(int argc, char** argv){
 
     backup = nullptr;
-    Studio* s;
-    s->start();
-    delete s;
-    s = backup;
-    s->start();
+    Studio s;
+    s.start();
 
+
+    if(backup!=nullptr) {
+        delete backup;
+        backup = nullptr;
+    }
+
+    //delete s;
 
 
 /*

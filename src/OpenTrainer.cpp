@@ -13,10 +13,13 @@ OpenTrainer::OpenTrainer(OpenTrainer&& other): BaseAction(other), trainerId(othe
     copy(other);
     other.clear();
 }
-OpenTrainer::~OpenTrainer(){}
+OpenTrainer::~OpenTrainer(){clear();}
+
 void OpenTrainer::clear(){
+    for(int i=0; i<(int)customers.size(); i++)
+        if(customers[i] != nullptr)
+            delete customers[i];
     customers.clear();
-    BaseAction::clear();
 }
 
 BaseAction* OpenTrainer::clone() {
@@ -54,7 +57,7 @@ void OpenTrainer::act(Studio &studio){
     else{
         for(int i=0; i<customers.size(); i++) {
             customerNameError +=  " " + customers[i]->toString();
-            trainer->addCustomer(customers[i]);
+            trainer->addCustomer(customers[i]->clone());
         }
         trainer->openTrainer();
         this->complete();

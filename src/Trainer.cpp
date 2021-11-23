@@ -17,10 +17,10 @@ void Trainer::clear() {
     orderList.clear();
 }
 void Trainer::copy(const Trainer& other) {
-    for(int i=0; i<customersList.size(); i++){
+    for(int i=0; i<other.customersList.size(); i++){
         customersList.push_back(other.customersList[i]->clone());
     }
-    for(int i=0; i<orderList.size(); i++){
+    for(int i=0; i<other.orderList.size(); i++){
         orderList.push_back(other.orderList[i]);
     }
 }

@@ -3,6 +3,7 @@
 //
 #include "../include/Action.h"
 #include "../include/Studio.h"
+#include "../include/Workout.h"
 
 PrintWorkoutOptions::PrintWorkoutOptions():BaseAction(){}
 BaseAction* PrintWorkoutOptions::clone() {
@@ -12,7 +13,6 @@ void PrintWorkoutOptions::act(Studio &studio) {
     std::vector<Workout> workouts = studio.getWorkoutOptions();
     for(int i=0; i<workouts.size(); i++)
         std::cout << workouts[i].toString() << std::endl;
-        //std::cout << workouts[i].getName() << ", " << workouts[i].getType() << ", "<< workouts[i].getPrice() << ", " << std::endl;
     complete();
 }
 

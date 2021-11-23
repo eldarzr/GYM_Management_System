@@ -14,7 +14,7 @@ extern Studio* backup;
 
 void Studio::start(){
 
-    backup = new Studio();
+    std::cout << "Studio is now open!" << std::endl;
     bool flg = true;
     while (flg) {
         std::string input;
@@ -47,13 +47,14 @@ void Studio::start(){
         if (input.find("close") != std::string::npos) {
             if (input.find("closeall") != std::string::npos){
                 closeAllAct();
+                std::cout << "Studio is now closed!" << std::endl;
+                flg= false;
+
             }
             else
                 closeAct(input);
         }
-        if (input.find("finish") != std::string::npos) {
-            flg = false;
-        }
+
 /*        action->act(*this);
         actionsLog.push_back(action);
         if(action->getStatus() == ERROR)
@@ -71,11 +72,11 @@ Studio::Studio(const Studio &other):id_customer(other.id_customer),id_counter(ot
 void Studio::copy(const Studio &other){
     open = other.open;
 
-    for(int i=0; i<other.trainers.size(); i++){
-        trainers.push_back(other.trainers[i]->clone());
-    }
     for(int i=0; i<other.workout_options.size(); i++){
         workout_options.push_back(other.workout_options[i]);
+    }
+    for(int i=0; i<other.trainers.size(); i++){
+        trainers.push_back(other.trainers[i]->clone());
     }
     for(int i=0; i<other.actionsLog.size(); i++){
         actionsLog.push_back(other.actionsLog[i]->clone());
@@ -114,11 +115,12 @@ Trainer* Studio::getTrainer(int tid){
 const std::vector<BaseAction*>& Studio::getActionsLog() const{return actionsLog;} // Return a reference to the history of actions
 std::vector<Workout>& Studio::getWorkoutOptions(){return workout_options;}
 void Studio::clear() {
-    for(int i=0;i<trainers.size();i++) {
-        delete trainers[i];
-    }
     for(int i=0;i<actionsLog.size();i++) {
         delete actionsLog[i];
+    }
+
+    for(int i=0;i<trainers.size();i++) {
+        delete trainers[i];
     }
     trainers.clear();
     actionsLog.clear();
@@ -293,7 +295,6 @@ void Studio::backupAct() {
     BaseAction* action = new BackupStudio();
     action->act(*this);
     actionsLog.push_back(action);
-    backup = new Studio(*this);
 }
 
 void Studio::restoreAct() {

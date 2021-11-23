@@ -4,6 +4,7 @@
 
 #include "../include/Action.h"
 
+extern Studio* backup;
 
 BaseAction::BaseAction(){}
 BaseAction::BaseAction(const BaseAction& other):errorMsg(other.errorMsg), status(other.status){}
