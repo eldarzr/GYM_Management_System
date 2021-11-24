@@ -62,7 +62,7 @@ void OpenTrainer::act(Studio &studio){
         customers.clear();
     }
     else{
-        for(int i=0; i<customers.size(); i++) {
+        for(int i=0; i<int(customers.size()); i++) {
             customerName +=  " " + customers[i]->toString();
             trainer->addCustomer(customers[i]->clone());
         }

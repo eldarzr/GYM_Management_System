@@ -46,7 +46,22 @@ Workout.h
 string
 -
 
-<<<<<<< HEAD
+/home/spl211/CLionProjects/SPL_HW1/src/BaseAction.cpp
+../include/Action.h
+/home/spl211/CLionProjects/SPL_HW1/include/Action.h
+
+/home/spl211/CLionProjects/SPL_HW1/src/MoveCustomer.cpp
+../include/Action.h
+/home/spl211/CLionProjects/SPL_HW1/include/Action.h
+../include/Studio.h
+/home/spl211/CLionProjects/SPL_HW1/include/Studio.h
+
+/home/spl211/CLionProjects/SPL_HW1/src/OpenTrainer.cpp
+../include/Action.h
+/home/spl211/CLionProjects/SPL_HW1/include/Action.h
+../include/Studio.h
+/home/spl211/CLionProjects/SPL_HW1/include/Studio.h
+
 /home/spl211/CLionProjects/SPL_HW1/src/Studio.cpp
 ../include/Studio.h
 /home/spl211/CLionProjects/SPL_HW1/include/Studio.h
@@ -62,11 +77,4 @@ cctype
 -
 algorithm
 -
-=======
-/home/spl211/SPL_HW1/src/PrintTrainerStatus.cpp
-../include/Action.h
-/home/spl211/SPL_HW1/include/Action.h
-../include/Studio.h
-/home/spl211/SPL_HW1/include/Studio.h
->>>>>>> e50a7390b8d49247eaabf8a12ac0ac003c466171
 

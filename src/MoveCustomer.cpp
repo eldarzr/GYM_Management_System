@@ -16,7 +16,7 @@ void MoveCustomer::act(Studio &studio){
     Trainer* destinationTrainer = studio.getTrainer(dstTrainer);
     if ((sourceTrainer == nullptr || destinationTrainer == nullptr)
     || ( !sourceTrainer->isOpen() || !destinationTrainer->isOpen() || !isCustomerExists(studio)
-    || destinationTrainer->getCapacity() == destinationTrainer->getCustomers().size())) {
+    || int(destinationTrainer->getCapacity()) == int(destinationTrainer->getCustomers().size()))) {
         this->error("Cannot move customer");
         std::cout << getErrorMsg() << std::endl;
     }
@@ -41,7 +41,7 @@ void MoveCustomer::act(Studio &studio){
 
 bool MoveCustomer::isCustomerExists(Studio &std){
   std::vector<Customer*>&  customersList = std.getTrainer(srcTrainer)->getCustomers();
-    for(int i=0; i<customersList.size(); i++){
+    for(int i=0; i<int(customersList.size()); i++){
         if(customersList[i]->getId() == id)
             return true;
     }

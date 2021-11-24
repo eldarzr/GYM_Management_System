@@ -11,6 +11,7 @@ BaseAction::BaseAction(const BaseAction& other):errorMsg(other.errorMsg), status
 BaseAction* BaseAction::operator=(const BaseAction& other){
     errorMsg = other.errorMsg;
     status = other.status;
+    return this;
 }
 BaseAction::~BaseAction(){ clear();}
 ActionStatus BaseAction::getStatus() const{return status;}
