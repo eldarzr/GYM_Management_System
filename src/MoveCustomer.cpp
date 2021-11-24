@@ -14,11 +14,12 @@ BaseAction* MoveCustomer::clone() {
 void MoveCustomer::act(Studio &studio){
     Trainer* sourceTrainer = studio.getTrainer(srcTrainer);
     Trainer* destinationTrainer = studio.getTrainer(dstTrainer);
-    if (sourceTrainer == nullptr || destinationTrainer == nullptr)
+    if ((sourceTrainer == nullptr || destinationTrainer == nullptr)
+    || ( !sourceTrainer->isOpen() || !destinationTrainer->isOpen() || !isCustomerExists(studio)
+    || destinationTrainer->getCapacity() == destinationTrainer->getCustomers().size())) {
         this->error("Cannot move customer");
-    else if( !sourceTrainer->isOpen() || !destinationTrainer->isOpen() || !isCustomerExists(studio)
-    || destinationTrainer->getCapacity() == destinationTrainer->getCustomers().size())
-        this->error("Cannot move customer");
+        std::cout << getErrorMsg() << std::endl;
+    }
     else{
         //create new customer
         Customer* customer = sourceTrainer->getCustomer(id);

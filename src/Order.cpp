@@ -15,15 +15,16 @@
         Trainer* trainer = studio.getTrainer(trainerId);
         if(trainer == nullptr || !(trainer->isOpen())) {
             this->error("Trainer does not exist or is not open");
+            std::cout << getErrorMsg() << std::endl;
             return;
         }
 
         std::vector<Customer*>& _allCustomers = trainer->getCustomers();
         std::vector<Workout>& _allWorkout =studio.getWorkoutOptions();
-        for(int i=0;i<_allCustomers.size();i++){
+        for(int i=0;i<int(_allCustomers.size());i++){
             std::vector<int> cusPlan=_allCustomers[i]->order(_allWorkout);
             trainer->order(_allCustomers[i]->getId(),cusPlan,_allWorkout);
-            for(int j=0;j<cusPlan.size();j++){
+            for(int j=0;j<int(cusPlan.size());j++){
                 std::cout << _allCustomers[i]->getName()<<" Is Doing "<<_allWorkout[cusPlan[j]].getName()<<std::endl;
             }
         }

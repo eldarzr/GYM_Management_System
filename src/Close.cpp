@@ -20,9 +20,8 @@ void Close::act(Studio &studio){
     else {
         int trainerSalary = trainerToClose->getSalary();
         trainerToClose->closeTrainer();
+        std::cout << "Trainer " << trainerId << " closed. Salary " <<trainerSalary <<"NIS" << std::endl;
         complete();
-        std::cout << "Trainer " << trainerId << " closed. Salary " <<trainerSalary <<"NIS";
-
     }
 
 }

@@ -13,18 +13,17 @@ BaseAction* CloseAll::clone() {
 }
 
 void CloseAll::act(Studio &studio){
-     int trainerAmount = studio.getNumOfTrainers();
+    int trainerAmount = studio.getNumOfTrainers();
     for (int trainerId=0; trainerId<trainerAmount ;trainerId++) {
         Trainer *trainerToClose = studio.getTrainer(trainerId);
         if (!(trainerToClose == nullptr || !trainerToClose->isOpen())) {
             int trainerSalary = trainerToClose->getSalary();
             trainerToClose->closeTrainer();
-            complete();
-            isAct=true;
-            std::cout << "Trainer " << trainerId << " closed. Salary " <<trainerSalary <<"NIS"<<"\n";
+            std::cout << "Trainer " << trainerId << " closed. Salary " <<trainerSalary <<"NIS"<<std::endl;
         }
     }
-
+    isAct=true;
+    complete();
 }
 std::string CloseAll::toString() const{
     if (!isAct)

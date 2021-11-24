@@ -13,13 +13,13 @@ std::vector<int> HeavyMuscleCustomer::order(const std::vector<Workout> &workout_
     std::vector<int> plan;
     std::vector<std::pair<int,int>> woPairs;
 
-    for(int i=0;i<workout_options.size();i++) {
+    for(int i=0;i<int(workout_options.size());i++) {
         if (workout_options[i].getType() == ANAEROBIC) {
             woPairs.push_back(std::make_pair(workout_options[i].getPrice(), workout_options[i].getId()));
         }
     }
     sort(woPairs.rbegin(),woPairs.rend());
-    for(int i=0; i<woPairs.size(); i++)
+    for(int i=0; i<int(woPairs.size()); i++)
     {
         plan.push_back(woPairs[i].second);
     }

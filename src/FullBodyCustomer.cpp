@@ -12,14 +12,19 @@ std::vector<int> FullBodyCustomer::order(const std::vector<Workout> &workout_opt
 
     std::vector<int> plan;
 
+    plan.push_back(minPlanId(workout_options,CARDIO));
+    plan.push_back(maxPlanId(workout_options,MIXED));
+    plan.push_back(minPlanId(workout_options,ANAEROBIC));
+/*
+
     int id_plan(0);
-    for(int i=0; i<workout_options.size(); i++) {
+    for(int i=0; i<int(workout_options.size()); i++) {
         if (workout_options[i].getType()==CARDIO && workout_options[i].getPrice() < workout_options[id_plan].getPrice())
             id_plan = i;
     }
     plan.push_back(id_plan);
     id_plan=0;
-    for(int i=0; i<workout_options.size(); i++) {
+    for(int i=0; i<int(workout_options.size()); i++) {
         if (workout_options[i].getType()==MIXED && workout_options[i].getPrice() > workout_options[id_plan].getPrice())
             id_plan = i;
     }
@@ -30,9 +35,29 @@ std::vector<int> FullBodyCustomer::order(const std::vector<Workout> &workout_opt
             id_plan = i;
     }
     plan.push_back(id_plan);
+*/
 
     return plan;
 }
 std::string FullBodyCustomer::toString() const{
     return getName() + ",fbd";
 }
+
+int FullBodyCustomer::minPlanId(const std::vector<Workout> &workout_options, WorkoutType type) {
+    int id_plan(0);
+    for(int i=0; i<int(workout_options.size()); i++) {
+        if (workout_options[i].getType()==type && workout_options[i].getPrice() < workout_options[id_plan].getPrice())
+            id_plan = i;
+    }
+    return id_plan;
+}
+
+int FullBodyCustomer::maxPlanId(const std::vector<Workout> &workout_options, WorkoutType type) {
+    int id_plan(0);
+    for(int i=0; i<int(workout_options.size()); i++) {
+        if (workout_options[i].getType()==type && workout_options[i].getPrice() > workout_options[id_plan].getPrice())
+            id_plan = i;
+    }
+    return id_plan;
+}
+
