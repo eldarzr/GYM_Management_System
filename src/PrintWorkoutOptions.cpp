@@ -13,7 +13,7 @@ BaseAction* PrintWorkoutOptions::clone() {
 }
 void PrintWorkoutOptions::act(Studio &studio) {
     std::vector<Workout> workouts = studio.getWorkoutOptions();
-    for(int i=0; i<workouts.size(); i++)
+    for(int i=0; i<int(workouts.size()); i++)
         std::cout << workouts[i].toString() << std::endl;
     complete();
 }

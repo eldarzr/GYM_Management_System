@@ -47,7 +47,7 @@ private:
     void clear();
     const int trainerId;
     std::vector<Customer *> customers;
-    std::string customerNameError;
+    std::string customerName;
 };
 
 
