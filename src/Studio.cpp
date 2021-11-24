@@ -12,12 +12,14 @@
 
 extern Studio* backup;
 
-Studio::Studio(const std::string &configFilePath):id_customer(0), id_counter(0), open(true){}
+Studio::Studio(const std::string &configFilePath):open(true){
+    init(configFilePath);
+}
 
-Studio::Studio():id_customer(0), id_counter(0), open(true){
+Studio::Studio():open(true){
     init("/home/spl211/ExmapleInput.txt");
 }
-Studio::Studio(const Studio &other):id_customer(other.id_customer),id_counter(other.id_counter),open(other.open){
+Studio::Studio(const Studio &other){
     copy(other);
 }
 void Studio::copy(const Studio &other){
@@ -25,13 +27,13 @@ void Studio::copy(const Studio &other){
     id_customer = other.id_customer;
     id_counter = other.id_counter;
 
-    for(int i=0; i<other.workout_options.size(); i++){
+    for(int i=0; i<int(other.workout_options.size()); i++){
         workout_options.push_back(other.workout_options[i]);
     }
-    for(int i=0; i<other.trainers.size(); i++){
+    for(int i=0; i<int(other.trainers.size()); i++){
         trainers.push_back(other.trainers[i]->clone());
     }
-    for(int i=0; i<other.actionsLog.size(); i++){
+    for(int i=0; i<int(other.actionsLog.size()); i++){
         actionsLog.push_back(other.actionsLog[i]->clone());
     }
 }
@@ -112,7 +114,7 @@ void Studio::start(){
 
 int Studio::getNumOfTrainers() const{ return trainers.size();}
 Trainer* Studio::getTrainer(int tid){
-    if(tid >= trainers.size() )
+    if(tid >= int(trainers.size()) )
         return nullptr;
     return trainers[tid];}
 const std::vector<BaseAction*>& Studio::getActionsLog() const{return actionsLog;} // Return a reference to the history of actions
@@ -131,32 +133,32 @@ void Studio::clear() {
     open = false;
 }
 void Studio::init(std::string address) {
-
-    int id_counter = 0;
+    id_customer = 0;
+    id_counter = 0;
 
     std::ifstream inFile = readFile(address);
 
     std::string line;
-    int num_of_trainer = 0;
+   // int num_of_trainer = 0;
     while(getline(inFile, line)) {
         int num;
         std::stringstream ss;
         ss << line;
         ss >> num;
         //trainers number
-        if(num != 0 &  !line.empty() &
+        if(num != 0 &&  !line.empty() &&
            line.find(",")== std::string::npos) {
-            num_of_trainer = num;
+          // int num_of_trainer = num;
         }
 
         //trainers capacities
-        if(num != 0 &  !line.empty() &
+        if(num != 0 &&  !line.empty() &&
            line.find(",")!= std::string::npos){
             initTrainers(line);
         }
 
         //workout options
-        if(num == 0 &  !line.empty() & line[0] != '#') {
+        if(num == 0 && !line.empty() && line[0] != '#') {
 
             initWorkouts(line);
         }
@@ -184,7 +186,7 @@ void Studio::initTrainers(std::string line){
         capacities.push_back(capacity);
     }
 
-    for(int i=0; i<capacities.size(); i++)
+    for(int i=0; i<int(capacities.size()); i++)
         trainers.push_back(new Trainer(capacities[i]));
 }
 void Studio::initWorkouts(std::string line){
@@ -304,7 +306,7 @@ void Studio::backupAct() {
 void Studio::restoreAct() {
     BaseAction* action = new RestoreStudio();
     action->act(*this);
-    actionsLog.push_back(action);
+ //   actionsLog.push_back(action);
 }
 Customer* Studio::parseCastumer(std::string sub, std::string name){
     if (sub.find("swt") != std::string::npos)
