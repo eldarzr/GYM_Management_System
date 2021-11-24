@@ -5,6 +5,8 @@
 #include "../include/Studio.h"
 
 PrintActionsLog::PrintActionsLog():BaseAction(){}
+PrintActionsLog::~PrintActionsLog() {};
+PrintActionsLog::PrintActionsLog(const PrintActionsLog &other):BaseAction(other) {}
 BaseAction* PrintActionsLog::clone() {
     return new PrintActionsLog(*this);
 }

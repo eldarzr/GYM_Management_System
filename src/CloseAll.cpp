@@ -6,9 +6,12 @@
 #include "../include/Studio.h"
 
 CloseAll::CloseAll():BaseAction(){isAct=false;}
+CloseAll::~CloseAll() {};
+CloseAll::CloseAll(const CloseAll &other):BaseAction(other) ,isAct(other.isAct){}
 BaseAction* CloseAll::clone() {
     return new CloseAll();
 }
+
 void CloseAll::act(Studio &studio){
      int trainerAmount = studio.getNumOfTrainers();
     for (int trainerId=0; trainerId<trainerAmount ;trainerId++) {

@@ -6,6 +6,8 @@
 #include "../include/Studio.h"
 
 MoveCustomer::MoveCustomer(int src, int dst, int customerId):BaseAction(),srcTrainer(src),dstTrainer(dst),id(customerId){}
+MoveCustomer::~MoveCustomer() {};
+MoveCustomer::MoveCustomer(const MoveCustomer &other):BaseAction(other) ,srcTrainer(other.srcTrainer),dstTrainer(other.dstTrainer),id(other.id){}
 BaseAction* MoveCustomer::clone() {
     return new MoveCustomer(*this);
 }

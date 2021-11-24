@@ -6,6 +6,8 @@
 #include "../include/Studio.h"
 
 Close::Close(int id):BaseAction(),trainerId(id){}
+Close::~Close() {};
+Close::Close(const Close &other):BaseAction(other) ,trainerId(other.trainerId){}
 BaseAction* Close::clone() {
     return new Close(*this);
 }

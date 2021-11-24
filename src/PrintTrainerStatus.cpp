@@ -5,6 +5,8 @@
 #include "../include/Studio.h"
 
 PrintTrainerStatus::PrintTrainerStatus(int id):BaseAction(),trainerId(id){}
+PrintTrainerStatus::~PrintTrainerStatus() {};
+PrintTrainerStatus::PrintTrainerStatus(const PrintTrainerStatus &other):BaseAction(other),trainerId(other.trainerId) {}
 BaseAction* PrintTrainerStatus::clone() {
     return new PrintTrainerStatus(*this);
 }

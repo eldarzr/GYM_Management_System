@@ -6,6 +6,8 @@
 #include "../include/Studio.h"
 
     Order::Order(int id):BaseAction(), trainerId(id){}
+    Order::~Order() {};
+    Order::Order(const Order &other):BaseAction(other) ,trainerId(other.trainerId){}
     BaseAction* Order::clone() {
         return new Order(*this);
     }

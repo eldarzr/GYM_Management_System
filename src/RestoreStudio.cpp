@@ -7,6 +7,8 @@
 extern Studio* backup;
 
 RestoreStudio::RestoreStudio():BaseAction(){}
+RestoreStudio::~RestoreStudio() {};
+RestoreStudio::RestoreStudio(const RestoreStudio &other):BaseAction(other){}
 BaseAction* RestoreStudio::clone() {
     return new RestoreStudio(*this);
 }

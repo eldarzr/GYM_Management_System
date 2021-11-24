@@ -6,6 +6,8 @@
 #include "../include/Workout.h"
 
 PrintWorkoutOptions::PrintWorkoutOptions():BaseAction(){}
+PrintWorkoutOptions::~PrintWorkoutOptions() {};
+PrintWorkoutOptions::PrintWorkoutOptions(const PrintWorkoutOptions &other):BaseAction(other) {}
 BaseAction* PrintWorkoutOptions::clone() {
     return new PrintWorkoutOptions(*this);
 }

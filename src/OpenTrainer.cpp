@@ -9,10 +9,10 @@ OpenTrainer::OpenTrainer(int id, std::vector<Customer *> &customersList):BaseAct
 OpenTrainer::OpenTrainer(const OpenTrainer& other): BaseAction(other), trainerId(other.trainerId){
     copy(other);
 }
-OpenTrainer::OpenTrainer(OpenTrainer&& other): BaseAction(other), trainerId(other.trainerId){
-    copy(other);
-    other.clear();
-}
+//OpenTrainer::OpenTrainer(OpenTrainer&& other): BaseAction(other), trainerId(other.trainerId){
+//    copy(other);
+//    other.clear();
+//}
 OpenTrainer::~OpenTrainer(){clear();}
 
 void OpenTrainer::clear(){
@@ -26,24 +26,24 @@ BaseAction* OpenTrainer::clone() {
     return new OpenTrainer(*this);
 }
 
-OpenTrainer& OpenTrainer::operator=(const OpenTrainer& other){
-    if(this != &other) {
-        clear();
-        copy(other);
-        BaseAction::operator=(other);
-    }
-    return *this;
-}
-OpenTrainer& OpenTrainer::operator=(OpenTrainer&& other){
-    if(this != &other) {
-        clear();
-        copy(other);
-        BaseAction::operator=(other);
-        other.clear();
-    }
-
-    return *this;
-}
+//OpenTrainer& OpenTrainer::operator=(const OpenTrainer& other){
+//    if(this != &other) {
+//        clear();
+//        copy(other);
+//        BaseAction::operator=(other);
+//    }
+//    return *this;
+//}
+//OpenTrainer& OpenTrainer::operator=(OpenTrainer&& other){
+//    if(this != &other) {
+//        clear();
+//        copy(other);
+//        BaseAction::operator=(other);
+//        other.clear();
+//    }
+//
+//    return *this;
+//}
 
 void OpenTrainer::copy(const OpenTrainer& other) {
     for(int i=0; i<other.customers.size(); i++)

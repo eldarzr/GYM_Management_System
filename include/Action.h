@@ -39,9 +39,6 @@ public:
     OpenTrainer(const OpenTrainer& other);
     virtual ~OpenTrainer();
     virtual BaseAction* clone();
-    virtual OpenTrainer& operator=(const OpenTrainer& other);
-    OpenTrainer(OpenTrainer&& other);
-    virtual OpenTrainer& operator=(OpenTrainer&& other);
 
     void act(Studio &studio);
     std::string toString() const;
@@ -57,6 +54,8 @@ private:
 class Order : public BaseAction {
 public:
     Order(int id);
+    virtual ~Order();
+    Order(const Order& other);
     void act(Studio &studio);
     virtual BaseAction* clone();
     std::string toString() const;
@@ -69,6 +68,8 @@ private:
 class MoveCustomer : public BaseAction {
 public:
     MoveCustomer(int src, int dst, int customerId);
+    virtual ~MoveCustomer();
+    MoveCustomer(const MoveCustomer& other);
     void act(Studio &studio);
     virtual BaseAction* clone();
     std::string toString() const;
@@ -77,13 +78,14 @@ private:
     const int srcTrainer;
     const int dstTrainer;
     const int id;
-
 };
 
 
 class Close : public BaseAction {
 public:
     Close(int id);
+    virtual ~Close();
+    Close(const Close& other);
     void act(Studio &studio);
     virtual BaseAction* clone();
     std::string toString() const;
@@ -95,6 +97,8 @@ private:
 class CloseAll : public BaseAction {
 public:
     CloseAll();
+    virtual ~CloseAll();
+    CloseAll(const CloseAll& other);
     void act(Studio &studio);
     virtual BaseAction* clone();
     std::string toString() const;
@@ -106,6 +110,8 @@ private:
 class PrintWorkoutOptions : public BaseAction {
 public:
     PrintWorkoutOptions();
+    virtual ~PrintWorkoutOptions();
+    PrintWorkoutOptions(const PrintWorkoutOptions& other);
     void act(Studio &studio);
     virtual BaseAction* clone();
     std::string toString() const;
@@ -116,6 +122,8 @@ private:
 class PrintTrainerStatus : public BaseAction {
 public:
     PrintTrainerStatus(int id);
+    virtual ~PrintTrainerStatus();
+    PrintTrainerStatus(const PrintTrainerStatus& other);
     void act(Studio &studio);
     std::string toString() const;
     virtual BaseAction* clone();
@@ -127,6 +135,8 @@ private:
 class PrintActionsLog : public BaseAction {
 public:
     PrintActionsLog();
+    virtual ~PrintActionsLog();
+    PrintActionsLog(const PrintActionsLog& other);
     void act(Studio &studio);
     virtual BaseAction* clone();
     std::string toString() const;
@@ -137,6 +147,8 @@ private:
 class BackupStudio : public BaseAction {
 public:
     BackupStudio();
+    virtual ~BackupStudio();
+    BackupStudio(const BackupStudio& other);
     void act(Studio &studio);
     virtual BaseAction* clone();
     std::string toString() const;
@@ -147,6 +159,8 @@ private:
 class RestoreStudio : public BaseAction {
 public:
     RestoreStudio();
+    virtual ~RestoreStudio();
+    RestoreStudio(const  RestoreStudio & other) ;
     void act(Studio &studio);
     virtual BaseAction* clone();
     std::string toString() const;
