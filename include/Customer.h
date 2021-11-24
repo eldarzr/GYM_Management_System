@@ -68,6 +68,8 @@ public:
     std::vector<int> order(const std::vector<Workout> &workout_options);
     std::string toString() const;
 private:
+    int minPlanId(const std::vector<Workout> &vector, WorkoutType type);
+    int maxPlanId(const std::vector<Workout> &workout_options, WorkoutType type);
 };
 
 
