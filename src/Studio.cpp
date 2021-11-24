@@ -306,6 +306,7 @@ void Studio::backupAct() {
 void Studio::restoreAct() {
     BaseAction* action = new RestoreStudio();
     action->act(*this);
+    delete action;
  //   actionsLog.push_back(action);
 }
 Customer* Studio::parseCastumer(std::string sub, std::string name){

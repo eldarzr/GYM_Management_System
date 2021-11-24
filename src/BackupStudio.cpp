@@ -13,6 +13,8 @@ BaseAction* BackupStudio::clone() {
     return new BackupStudio(*this);
 }
 void BackupStudio::act(Studio &studio) {
+    if(backup)
+        delete backup;
     backup = new Studio(studio);
     complete();
 }
