@@ -43,6 +43,7 @@ public:
     std::string toString() const;
     virtual Customer* clone();
 private:
+    int getCheapestWorkout(const std::vector<Workout> &vector);
 };
 
 

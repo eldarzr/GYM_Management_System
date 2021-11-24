@@ -13,15 +13,25 @@ std::vector<int> CheapCustomer::order(const std::vector<Workout> &workout_option
     std::vector<int>plan;
     if(workout_options.size() == 0)
         return plan;
-    int id_plan(0);
-    for(int i=0; i<workout_options.size(); i++) {
-        if (workout_options[i].getPrice() < workout_options[id_plan].getPrice())
-            id_plan = i;
-    }
+    int id_plan = getCheapestWorkout(workout_options);
     plan.push_back(id_plan);
     return plan;
 }
+
+int CheapCustomer::getCheapestWorkout(const std::vector<Workout> &workout_options) {
+    int id_plan(0);
+    for(int i=0; i<int(workout_options.size()); i++) {
+        if (workout_options[i].getPrice() < workout_options[id_plan].getPrice())
+            id_plan = i;
+    }
+    return id_plan;
+}
+
 std::string CheapCustomer::toString() const{
     return getName() + ",chp";
 }
+
+
+
+
 

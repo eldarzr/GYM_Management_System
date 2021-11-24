@@ -15,11 +15,11 @@ WorkoutType Workout::getType() const{return type;}
 std::string Workout::toString() const{
     std::string ret = name + ", ";
     if(type == ANAEROBIC)
-        ret = ret + "ANAEROBIC, ";
+        ret = ret + "Anaerobic, ";
     else if(type == MIXED)
-        ret = ret + "MIXED, ";
+        ret = ret + "Mixed, ";
     else if(type == CARDIO)
-        ret = ret + "CARDIO, ";
+        ret = ret + "Cardio, ";
     ret = ret + std::to_string(price);
 
     return ret;

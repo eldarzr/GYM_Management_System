@@ -12,7 +12,7 @@ BaseAction* PrintActionsLog::clone() {
 }
 void PrintActionsLog::act(Studio &studio) {
     std::vector<BaseAction*> actionLog = studio.getActionsLog();
-    for(int i=0; i<actionLog.size(); i++) {
+    for(int i=0; i<int(actionLog.size()); i++) {
         std::cout << actionLog[i]->toString() << std::endl;
     }
     complete();
