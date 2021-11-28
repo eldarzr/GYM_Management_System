@@ -41,7 +41,13 @@ Trainer::~Trainer(){
 
 Trainer::Trainer(Trainer&& other):capacity(other.capacity), open(other.open), salary(other.salary){
     if(this != &other) {
-        copy(other);
+        for(int i=0; i<int(other.customersList.size()); i++){
+            customersList.push_back(other.customersList[i]);
+            other.customersList[i]= nullptr;
+        }
+        for(int i=0; i<int(other.orderList.size()); i++){
+            orderList.push_back(other.orderList[i]);
+        }
         other.clear();
     }
 }
@@ -51,7 +57,14 @@ Trainer& Trainer::operator=(Trainer&& other){
         capacity = other.capacity;
         salary = other.salary;
         open = other.open;
-        copy(other);
+        for(int i=0; i<int(other.customersList.size()); i++){
+            customersList.push_back(other.customersList[i]);
+            other.customersList[i] = nullptr;
+        }
+        for(int i=0; i<int(other.orderList.size()); i++){
+            orderList.push_back(other.orderList[i]);
+        }
+        other.clear();
     }
     return *this;
 }

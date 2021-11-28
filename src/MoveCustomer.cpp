@@ -34,7 +34,7 @@ void MoveCustomer::act(Studio &studio){
         if(sourceTrainer->getCustomers().size()==0) {
             sourceTrainer->closeTrainer();
         }
-
+        complete();
     }
 
 }
@@ -56,4 +56,4 @@ std::string MoveCustomer::toString() const{
     else s=s+"Completed";
 
     return s;
-   ;}
+   }

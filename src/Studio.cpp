@@ -47,14 +47,37 @@ Studio& Studio::operator =(const Studio &other){
     }
     return *this;
 }
-Studio::Studio(Studio &&otherStudio){
-    copy(otherStudio);
+Studio::Studio(Studio &&otherStudio):open(otherStudio.open),id_customer(otherStudio.id_customer),id_counter(otherStudio.id_counter){
+    for(int i=0; i<int(otherStudio.workout_options.size()); i++){
+        workout_options.push_back(otherStudio.workout_options[i]);
+    }
+    for(int i=0; i<int(otherStudio.trainers.size()); i++){
+        trainers.push_back(otherStudio.trainers[i]);
+        otherStudio.trainers[i] = nullptr;
+    }
+    for(int i=0; i<int(otherStudio.actionsLog.size()); i++){
+        actionsLog.push_back(otherStudio.actionsLog[i]);
+        otherStudio.actionsLog[i] = nullptr;
+    }
     otherStudio.clear();
 }
 Studio& Studio::operator = (Studio && other){
     if(this != &other) {
         clear();
-        copy(other);
+        open = other.open;
+        id_customer = other.id_customer;
+        id_counter = other.id_counter;
+        for(int i=0; i<int(other.workout_options.size()); i++){
+            workout_options.push_back(other.workout_options[i]);
+        }
+        for(int i=0; i<int(other.trainers.size()); i++){
+            trainers.push_back(other.trainers[i]);
+            other.trainers[i] = nullptr;
+        }
+        for(int i=0; i<int(other.actionsLog.size()); i++){
+            actionsLog.push_back(other.actionsLog[i]);
+            other.actionsLog[i] = nullptr;
+        }
         other.clear();
     }
     return *this;
